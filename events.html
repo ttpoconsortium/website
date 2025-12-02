@@ -209,7 +209,7 @@
 	<!-- Events Section -->
 	<div class="my-8 px-4 md:px-8 max-w-7xl mx-auto">
 		<!-- Upcoming Events -->
-		<div class="mb-10">
+		<div id="upcomingEventsSection" class="mb-10">
 			<h3 class="text-white uppercase font-bold text-xl mb-6 text-center">
 				<span class="relative inline-block">
 					UPCOMING EVENTS
@@ -308,6 +308,19 @@
 
 <script>
 	const upcomingEvents = [
+		// {
+		// 	id: 1,
+		// 	title: "Career Nexus 2025",
+		// 	description: "A career fair bringing together top companies and college placement & training officers to explore recruitment opportunities, industry collaborations, and internship programs.",
+		// 	venue: "Padmaja Palm Groves Resort, Hyderabad",
+		// 	date: "June 6,7 2025",
+		// 	time: "10:00 AM onwards",
+		// 	image: "https://res.cloudinary.com/da5w3bmzc/image/upload/v1748344246/careernexus25/careernexusposter2025.jpg",
+		// 	descriptionLink: "/events/career-nexus-2025.html"
+		// }
+	];
+
+	const pastEvents = [
 		{
 			id: 1,
 			title: "Career Nexus 2025",
@@ -315,12 +328,9 @@
 			venue: "Padmaja Palm Groves Resort, Hyderabad",
 			date: "June 6,7 2025",
 			time: "10:00 AM onwards",
-			image: "https://res.cloudinary.com/da5w3bmzc/image/upload/v1748344246/careernexus25/careernexusposter2025.jpg",
-			descriptionLink: "/events/career-nexus-2025.html"
-		}
-	];
-
-	const pastEvents = [
+			image: "https://res.cloudinary.com/da5w3bmzc/image/upload/v1764678700/careernexus25/DJ6A7324_lpddkr.jpg",
+			galleryLink: "/events/career-nexus-2025.html"
+		},
 		{
 			id: 3,
 			title: "SAP Digital Conclave",
@@ -345,8 +355,16 @@
 
 	// Render Upcoming Events
 	const upcomingEventsContainer = document.getElementById('upcomingEventsContainer');
-	upcomingEvents.forEach(event => {
-		const eventHTML = `
+	const upcomingEventsSection = document.getElementById('upcomingEventsSection');
+
+	if (upcomingEvents.length === 0) {
+		if (upcomingEventsSection) {
+			upcomingEventsSection.style.display = 'none';
+		}
+	} else {
+
+		upcomingEvents.forEach(event => {
+			const eventHTML = `
     <div class="bg-white w-full md:w-[30%] bg-opacity-10 backdrop-filter backdrop-blur-sm rounded-lg overflow-hidden shadow-md hover:shadow-xl border border-opacity-20 border-white transition duration-300 transform hover:-translate-y-1">
       <div class="h-40 overflow-hidden">
         <img src="${event.image}" alt="${event.title}" class="w-full h-full object-cover transition duration-500 hover:scale-105">
@@ -385,9 +403,10 @@
       </div>
     </div>
     `;
-		upcomingEventsContainer.innerHTML += eventHTML;
-	});
+			upcomingEventsContainer.innerHTML += eventHTML;
+		});
 
+	}
 	// Render Past Events
 	const pastEventsContainer = document.getElementById('pastEventsContainer');
 	pastEvents.forEach(event => {
