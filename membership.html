@@ -19,7 +19,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="./js/navbar.js"></script>
-	<link rel="stylesheet" href="./css/navbar.css">
+  <link rel="stylesheet" href="./css/navbar.css">
   <style>
     body {
       background: url('https://res.cloudinary.com/dbenkbws8/image/upload/v1691485885/Rectangle_2_c5utnz.png') no-repeat center center fixed;
@@ -52,332 +52,352 @@
   <div class="relative z-10 w-full">
     <!-- Navbar -->
     <div class="w-full bg-consortium-blue-dark bg-opacity-90">
-			<!-- Mobile View: Logo and Title on left, Hamburger on right -->
-			<div class="flex sm:hidden flex-row justify-between items-center py-2 px-4">
-			  <div class="flex items-center">
-				<img class="h-16 mr-2 -mt-2"
-				  src="https://res.cloudinary.com/dbenkbws8/image/upload/v1691501311/Asset_3_1_ay28ar.png" />
-				<h1 class="font-fira-sans text-white text-center font-bold tracking-wide text-[16px]">
-					TELANGANA TRAINING & PLACEMENT OFFICERS CONSORTIUM
-				</h1>
-			  </div>
-			  
-			  <!-- Mobile Navigation Hamburger Button -->
-			  <div>
-				<button id="menu-toggle" class="text-white focus:outline-none">
-				  <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-				  </svg>
-				</button>
-			  </div>
-			</div>
-			
-			<!-- Desktop View: Centered Logo and Title -->
-			<div class="hidden sm:flex flex-row justify-center items-center px-8 py-3">
-			  <img class="h-28 mx-3 -mt-2"
-				src="https://res.cloudinary.com/dbenkbws8/image/upload/v1691501311/Asset_3_1_ay28ar.png" />
-		  
-			  <div class="flex flex-col items-start">
-				<h1 class="font-fira-sans text-white font-bold tracking-wide text-[28px]">
-				  TELANGANA TRAINING & PLACEMENT OFFICERS CONSORTIUM
-				</h1>
-				<ul class="flex gap-5 mt-2">
-				  <li><a href="/index.html" class="text-gray-400 font-bold text-[14px] hover:text-white">HOME</a></li>
-				  <li><a href="/aboutUs.html" class="text-gray-400 font-bold text-[14px] hover:text-white">ABOUT US</a></li>
-				  <li><a href="/events.html" class="text-gray-400 font-bold text-[14px] hover:text-white">EVENTS</a></li>
-				  <li><a href="/committee.html" class="text-gray-400 font-bold text-[14px] hover:text-white">COMMITTEE</a></li>
-				  <li><a href="/members.html" class="text-gray-400 font-bold text-[14px] hover:text-white">MEMBERS</a></li>
-				  <li><a href="/membership.html" class="text-white font-bold text-[14px] hover:text-white">MEMBER REGISTRATION</a></li>
-				  <li><a href="/meetings.html" class="text-gray-400 font-bold text-[14px] hover:text-white">MEETINGS</a></li>
-				  <li><a href="/gallery.html" class="text-gray-400 font-bold text-[14px] hover:text-white">GALLERY</a></li>
-				  <li><a href="/contact.html" class="text-gray-400 font-bold text-[14px] hover:text-white">CONTACT</a></li>
-				</ul>
-			  </div>
-			</div>
-		  </div>
-		  
-		  <!-- Mobile Navigation Overlay (Hidden by default) -->
-		  <div id="mobile-menu" class="fixed inset-0 bg-consortium-blue-dark bg-opacity-95 z-50 transform -translate-y-full opacity-0 pointer-events-none">
-			<!-- Close Button (X Mark) -->
-			<div class="absolute top-6 right-6">
-			  <button id="close-menu" class="text-white p-2 focus:outline-none rounded-full hover:bg-consortium-blue-light transition-colors duration-300">
-				<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-				  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path>
-				</svg>
-			  </button>
-			</div>
-		  
-			<!-- Navigation Links -->
-			<div class="flex flex-col h-full justify-center items-center">
-			  <ul class="space-y-6 text-center">
-				<li><a href="/index.html" class="text-gray-400 font-bold text-2xl hover:text-white transition-colors duration-300">HOME</a></li>
-				<li><a href="/aboutUs.html" class="text-gray-400font-bold text-2xl hover:text-white transition-colors duration-300">ABOUT US</a></li>
-				<li><a href="/events.html" class="text-gray-400 font-bold text-2xl hover:text-white transition-colors duration-300">EVENTS</a></li>
-				<li><a href="/committee.html" class="text-gray-400 font-bold text-2xl hover:text-white transition-colors duration-300">COMMITTEE</a></li>
-				<li><a href="/members.html" class="text-gray-400 font-bold text-2xl hover:text-white transition-colors duration-300">MEMBERS</a></li>
-				<li><a href="/membership.html" class="text-white font-bold text-2xl hover:text-white transition-colors duration-300">MEMBER REGISTRATION</a></li>
-				<li><a href="/meetings.html" class="text-gray-400 font-bold text-2xl hover:text-white transition-colors duration-300">MEETINGS</a></li>
-				<li><a href="/gallery.html" class="text-gray-400 font-bold text-2xl hover:text-white transition-colors duration-300">GALLERY</a></li>
-				<li><a href="/contact.html" class="text-gray-400 font-bold text-2xl hover:text-white transition-colors duration-300">CONTACT</a></li>
-			  </ul>
-			</div>
-		  </div>
-		</div>
-    <!-- Membership Registration section -->
-    <div class="py-12">
-      <div class="container mx-auto px-4 max-w-5xl">
-        <!-- Registration Banner -->
-        <div class="bg-consortium-blue-dark rounded-lg shadow-lg p-6 mb-10 border-l-4 border-yellow-500">
-          <h1 class="text-3xl font-bold text-white mb-4 text-center">Membership Registration</h1>
-          <p class="text-xl font-semibold text-yellow-500 text-center animate-bounce">
-            Annual Member Registration for year 2025 - 2026 will be accepted till 20th March 2025.
-          </p>
+      <!-- Mobile View: Logo and Title on left, Hamburger on right -->
+      <div class="flex sm:hidden flex-row justify-between items-center py-2 px-4">
+        <div class="flex items-center">
+          <img class="h-16 mr-2 -mt-2"
+            src="https://res.cloudinary.com/dbenkbws8/image/upload/v1691501311/Asset_3_1_ay28ar.png" />
+          <h1 class="font-fira-sans text-white text-center font-bold tracking-wide text-[16px]">
+            TELANGANA TRAINING & PLACEMENT OFFICERS CONSORTIUM
+          </h1>
         </div>
 
-        <!-- Benefits Section -->
-        <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 mb-10 shadow-xl">
-          <h2 class="text-2xl font-bold text-center text-yellow-500 mb-6">TTPOC Membership Benefits</h2>
-          <p class="text-gray-100 mb-6 text-lg">
-            As a TTPOC (Telangana TPOs Consortium) member, you enjoy several unique benefits that enhance your role as a
-            Training & Placement Officer (TPO) and contribute to professional growth. Here are the key advantages:
-          </p>
-
-          <div class="grid md:grid-cols-2 gap-6">
-            <!-- Benefit Card 1 -->
-            <div
-              class="bg-consortium-blue-dark bg-opacity-80 rounded-lg p-5 shadow-md hover:shadow-lg transition-all transform hover:-translate-y-1">
-              <h3 class="text-xl font-bold text-yellow-500 mb-3">Exclusive Networking & Collaboration</h3>
-              <ul class="space-y-2">
-                <li class="flex items-start">
-                  <span class="text-green-400 mr-2">✓</span>
-                  <span class="text-cyan-200">Connect with TPOs across Telangana to share insights and
-                    strategies.</span>
-                </li>
-                <li class="flex items-start">
-                  <span class="text-green-400 mr-2">✓</span>
-                  <span class="text-cyan-200">Engage with industry leaders, HR professionals, and recruiters.</span>
-                </li>
-                <li class="flex items-start">
-                  <span class="text-green-400 mr-2">✓</span>
-                  <span class="text-cyan-200">Collaborate with colleges for inter-institutional training
-                    programs.</span>
-                </li>
-              </ul>
-            </div>
-
-            <!-- Benefit Card 2 -->
-            <div
-              class="bg-consortium-blue-dark bg-opacity-80 rounded-lg p-5 shadow-md hover:shadow-lg transition-all transform hover:-translate-y-1">
-              <h3 class="text-xl font-bold text-yellow-500 mb-3">Access to Premium Placement Drives</h3>
-              <ul class="space-y-2">
-                <li class="flex items-start">
-                  <span class="text-green-400 mr-2">✓</span>
-                  <span class="text-cyan-200">Participate in TTPOC-organized mega placement drives.</span>
-                </li>
-                <li class="flex items-start">
-                  <span class="text-green-400 mr-2">✓</span>
-                  <span class="text-cyan-200">Get priority access to campus recruitment opportunities.</span>
-                </li>
-                <li class="flex items-start">
-                  <span class="text-green-400 mr-2">✓</span>
-                  <span class="text-cyan-200">Gain insights into employer expectations and hiring trends.</span>
-                </li>
-              </ul>
-            </div>
-
-            <!-- Benefit Card 3 -->
-            <div
-              class="bg-consortium-blue-dark bg-opacity-80 rounded-lg p-5 shadow-md hover:shadow-lg transition-all transform hover:-translate-y-1">
-              <h3 class="text-xl font-bold text-yellow-500 mb-3">Professional Development & Training</h3>
-              <ul class="space-y-2">
-                <li class="flex items-start">
-                  <span class="text-green-400 mr-2">✓</span>
-                  <span class="text-cyan-200">Attend exclusive workshops, training sessions, and certification
-                    programs.</span>
-                </li>
-                <li class="flex items-start">
-                  <span class="text-green-400 mr-2">✓</span>
-                  <span class="text-cyan-200">Learn from industry experts, soft skills trainers, and HR
-                    specialists.</span>
-                </li>
-                <li class="flex items-start">
-                  <span class="text-green-400 mr-2">✓</span>
-                  <span class="text-cyan-200">Gain knowledge on AI-driven hiring and interview techniques.</span>
-                </li>
-              </ul>
-            </div>
-
-            <!-- Benefit Card 4 -->
-            <div
-              class="bg-consortium-blue-dark bg-opacity-80 rounded-lg p-5 shadow-md hover:shadow-lg transition-all transform hover:-translate-y-1">
-              <h3 class="text-xl font-bold text-yellow-500 mb-3">Increased Institutional Visibility</h3>
-              <ul class="space-y-2">
-                <li class="flex items-start">
-                  <span class="text-green-400 mr-2">✓</span>
-                  <span class="text-cyan-200">Showcase your institution through TTPOC platforms and job fairs.</span>
-                </li>
-                <li class="flex items-start">
-                  <span class="text-green-400 mr-2">✓</span>
-                  <span class="text-cyan-200">Get recognition for best placement practices.</span>
-                </li>
-                <li class="flex items-start">
-                  <span class="text-green-400 mr-2">✓</span>
-                  <span class="text-cyan-200">Enhance your college's reputation by attracting recruiters.</span>
-                </li>
-              </ul>
-            </div>
-
-            <!-- Benefit Card 5 -->
-            <div
-              class="bg-consortium-blue-dark bg-opacity-80 rounded-lg p-5 shadow-md hover:shadow-lg transition-all transform hover:-translate-y-1">
-              <h3 class="text-xl font-bold text-yellow-500 mb-3">Entrepreneurship & Industry Connect</h3>
-              <ul class="space-y-2">
-                <li class="flex items-start">
-                  <span class="text-green-400 mr-2">✓</span>
-                  <span class="text-cyan-200">Encourage students to explore entrepreneurship opportunities.</span>
-                </li>
-                <li class="flex items-start">
-                  <span class="text-green-400 mr-2">✓</span>
-                  <span class="text-cyan-200">Facilitate guest lectures, mentorship programs, and industry
-                    visits.</span>
-                </li>
-                <li class="flex items-start">
-                  <span class="text-green-400 mr-2">✓</span>
-                  <span class="text-cyan-200">Connect with government and private sector initiatives.</span>
-                </li>
-              </ul>
-            </div>
-
-            <!-- Benefit Card 6 -->
-            <div
-              class="bg-consortium-blue-dark bg-opacity-80 rounded-lg p-5 shadow-md hover:shadow-lg transition-all transform hover:-translate-y-1">
-              <h3 class="text-xl font-bold text-yellow-500 mb-3">Recognition & Career Growth</h3>
-              <ul class="space-y-2">
-                <li class="flex items-start">
-                  <span class="text-green-400 mr-2">✓</span>
-                  <span class="text-cyan-200">Get opportunities for leadership roles within TTPOC.</span>
-                </li>
-                <li class="flex items-start">
-                  <span class="text-green-400 mr-2">✓</span>
-                  <span class="text-cyan-200">Receive appreciation for placement achievements.</span>
-                </li>
-                <li class="flex items-start">
-                  <span class="text-green-400 mr-2">✓</span>
-                  <span class="text-cyan-200">Build a strong personal brand in academic and corporate sectors.</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Registration Links -->
-        <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-6 mb-10">
-          <a href="membership.pdf" download
-            class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-full shadow-lg transition-all flex items-center w-64 justify-center">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24"
-              stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10" />
+        <!-- Mobile Navigation Hamburger Button -->
+        <div>
+          <button id="menu-toggle" class="text-white focus:outline-none">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
             </svg>
-            Download Form
-          </a>
-
-          <a href="https://tinyurl.com/TTPOC-NS2024" target="_blank"
-            class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-full shadow-lg transition-all flex items-center w-64 justify-center">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24"
-              stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-            </svg>
-            Register Now
-          </a>
+          </button>
         </div>
+      </div>
 
+      <!-- Desktop View: Centered Logo and Title -->
+      <div class="hidden sm:flex flex-row justify-center items-center px-8 py-3">
+        <img class="h-28 mx-3 -mt-2"
+          src="https://res.cloudinary.com/dbenkbws8/image/upload/v1691501311/Asset_3_1_ay28ar.png" />
 
-
-        <!-- Bank Details -->
-        <div class="bg-white rounded-lg shadow-lg p-6 mb-10 transform hover:shadow-xl transition-all">
-          <h3 class="text-2xl font-bold text-consortium-blue text-center mb-6 border-b pb-2">Bank Details</h3>
-          <div class="grid md:grid-cols-2 gap-4">
-            <div class="flex items-center">
-              <span class="font-semibold text-consortium-blue w-1/3">Bank Name:</span>
-              <span class="text-gray-700">UNION BANK</span>
-            </div>
-            <div class="flex items-center">
-              <span class="font-semibold text-consortium-blue w-1/3">Account Number:</span>
-              <span class="text-gray-700">124611010000045</span>
-            </div>
-            <div class="flex items-center md:col-span-2">
-              <span class="font-semibold text-consortium-blue w-1/6">Account Name:</span>
-              <span class="text-gray-700">TELANGANA TRAINING & PLACEMENT OFFICERS CONSORTIUM</span>
-            </div>
-            <div class="flex items-center">
-              <span class="font-semibold text-consortium-blue w-1/3">IFSC Code:</span>
-              <span class="text-gray-700">UBIN0812463</span>
-            </div>
-          </div>
+        <div class="flex flex-col items-start">
+          <h1 class="font-fira-sans text-white font-bold tracking-wide text-[28px]">
+            TELANGANA TRAINING & PLACEMENT OFFICERS CONSORTIUM
+          </h1>
+          <ul class="flex gap-5 mt-2">
+            <li><a href="/index.html" class="text-gray-400 font-bold text-[14px] hover:text-white">HOME</a></li>
+            <li><a href="/aboutUs.html" class="text-gray-400 font-bold text-[14px] hover:text-white">ABOUT US</a></li>
+            <li><a href="/events.html" class="text-gray-400 font-bold text-[14px] hover:text-white">EVENTS</a></li>
+            <li><a href="/committee.html" class="text-gray-400 font-bold text-[14px] hover:text-white">COMMITTEE</a>
+            </li>
+            <li><a href="/members.html" class="text-gray-400 font-bold text-[14px] hover:text-white">MEMBERS</a></li>
+            <li><a href="/membership.html" class="text-white font-bold text-[14px] hover:text-white">MEMBER
+                REGISTRATION</a></li>
+            <li><a href="/meetings.html" class="text-gray-400 font-bold text-[14px] hover:text-white">MEETINGS</a></li>
+            <li><a href="/gallery.html" class="text-gray-400 font-bold text-[14px] hover:text-white">GALLERY</a></li>
+            <li><a href="/contact.html" class="text-gray-400 font-bold text-[14px] hover:text-white">CONTACT</a></li>
+          </ul>
         </div>
-
       </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 py-12 pb-2">
-      <div class="container mx-auto max-w-6xl px-4">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <!-- Column 1: About -->
-          <div>
-            <h3 class="text-xl font-bold mb-4 text-consortium-blue-light">About Us</h3>
-            <p class="text-gray-300 mb-4">
-              Telangana TPO Consortium is a collaborative platform for Training & Placement Officers
-              across
-              the state to
-              enhance placement opportunities for students.
-            </p>
-          </div>
+    <!-- Mobile Navigation Overlay (Hidden by default) -->
+    <div id="mobile-menu"
+      class="fixed inset-0 bg-consortium-blue-dark bg-opacity-95 z-50 transform -translate-y-full opacity-0 pointer-events-none">
+      <!-- Close Button (X Mark) -->
+      <div class="absolute top-6 right-6">
+        <button id="close-menu"
+          class="text-white p-2 focus:outline-none rounded-full hover:bg-consortium-blue-light transition-colors duration-300">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
 
-          <!-- Column 2: Quick Links -->
-          <div>
-            <h3 class="text-xl font-bold mb-4 text-consortium-blue-light">Quick Links</h3>
+      <!-- Navigation Links -->
+      <div class="flex flex-col h-full justify-center items-center">
+        <ul class="space-y-6 text-center">
+          <li><a href="/index.html"
+              class="text-gray-400 font-bold text-2xl hover:text-white transition-colors duration-300">HOME</a></li>
+          <li><a href="/aboutUs.html"
+              class="text-gray-400font-bold text-2xl hover:text-white transition-colors duration-300">ABOUT US</a></li>
+          <li><a href="/events.html"
+              class="text-gray-400 font-bold text-2xl hover:text-white transition-colors duration-300">EVENTS</a></li>
+          <li><a href="/committee.html"
+              class="text-gray-400 font-bold text-2xl hover:text-white transition-colors duration-300">COMMITTEE</a>
+          </li>
+          <li><a href="/members.html"
+              class="text-gray-400 font-bold text-2xl hover:text-white transition-colors duration-300">MEMBERS</a></li>
+          <li><a href="/membership.html"
+              class="text-white font-bold text-2xl hover:text-white transition-colors duration-300">MEMBER
+              REGISTRATION</a></li>
+          <li><a href="/meetings.html"
+              class="text-gray-400 font-bold text-2xl hover:text-white transition-colors duration-300">MEETINGS</a></li>
+          <li><a href="/gallery.html"
+              class="text-gray-400 font-bold text-2xl hover:text-white transition-colors duration-300">GALLERY</a></li>
+          <li><a href="/contact.html"
+              class="text-gray-400 font-bold text-2xl hover:text-white transition-colors duration-300">CONTACT</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- Membership Registration section -->
+  <div class="py-12">
+    <div class="container mx-auto px-4 max-w-5xl">
+      <!-- Registration Banner -->
+      <div class="bg-consortium-blue-dark rounded-lg shadow-lg p-6 mb-10 border-l-4 border-yellow-500">
+        <h1 class="text-3xl font-bold text-white mb-4 text-center">Membership Registration</h1>
+        <p class="text-xl font-semibold text-yellow-500 text-center animate-bounce">
+          Annual Member Registration for year 2026 - 2027 will be accepted till 10th February 2026.
+        </p>
+      </div>
+
+      <!-- Benefits Section -->
+      <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 mb-10 shadow-xl">
+        <h2 class="text-2xl font-bold text-center text-yellow-500 mb-6">TTPOC Membership Benefits</h2>
+        <p class="text-gray-100 mb-6 text-lg">
+          As a TTPOC (Telangana TPOs Consortium) member, you enjoy several unique benefits that enhance your role as a
+          Training & Placement Officer (TPO) and contribute to professional growth. Here are the key advantages:
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-6">
+          <!-- Benefit Card 1 -->
+          <div
+            class="bg-consortium-blue-dark bg-opacity-80 rounded-lg p-5 shadow-md hover:shadow-lg transition-all transform hover:-translate-y-1">
+            <h3 class="text-xl font-bold text-yellow-500 mb-3">Exclusive Networking & Collaboration</h3>
             <ul class="space-y-2">
-              <li><a href="/aboutUs.html" class="text-gray-300 hover:text-white transition">About Us</a>
+              <li class="flex items-start">
+                <span class="text-green-400 mr-2">✓</span>
+                <span class="text-cyan-200">Connect with TPOs across Telangana to share insights and
+                  strategies.</span>
               </li>
-              <li><a href="/events.html" class="text-gray-300 hover:text-white transition">Events</a></li>
-              <li><a href="/committee.html" class="text-gray-300 hover:text-white transition">Committee</a>
+              <li class="flex items-start">
+                <span class="text-green-400 mr-2">✓</span>
+                <span class="text-cyan-200">Engage with industry leaders, HR professionals, and recruiters.</span>
               </li>
-              <li><a href="/membership.html" class="text-gray-300 hover:text-white transition">Membership</a>
+              <li class="flex items-start">
+                <span class="text-green-400 mr-2">✓</span>
+                <span class="text-cyan-200">Collaborate with colleges for inter-institutional training
+                  programs.</span>
               </li>
             </ul>
           </div>
 
-          <!-- Column 3: Contact & Social -->
-          <div>
-            <h3 class="text-xl font-bold mb-4 text-consortium-blue-light">Connect With Us</h3>
-            <p class="text-gray-300 mb-4">Follow us on social media for updates and announcements</p>
+          <!-- Benefit Card 2 -->
+          <div
+            class="bg-consortium-blue-dark bg-opacity-80 rounded-lg p-5 shadow-md hover:shadow-lg transition-all transform hover:-translate-y-1">
+            <h3 class="text-xl font-bold text-yellow-500 mb-3">Access to Premium Placement Drives</h3>
+            <ul class="space-y-2">
+              <li class="flex items-start">
+                <span class="text-green-400 mr-2">✓</span>
+                <span class="text-cyan-200">Participate in TTPOC-organized mega placement drives.</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-green-400 mr-2">✓</span>
+                <span class="text-cyan-200">Get priority access to campus recruitment opportunities.</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-green-400 mr-2">✓</span>
+                <span class="text-cyan-200">Gain insights into employer expectations and hiring trends.</span>
+              </li>
+            </ul>
+          </div>
 
-            <!-- Social Media Icons -->
-            <div class="flex gap-4">
-              <a href="https://twitter.com/ttpoconsortium"
-                class="bg-blue-500 hover:bg-blue-600 py-3 px-4 rounded-full transition-all transform hover:scale-110">
-                <i class="fab fa-twitter text-white text-xl"></i>
-              </a>
-              <a href="https://www.instagram.com/ttpoconsortium/"
-                class="bg-gradient-to-r from-purple-500 to-pink-500 py-3 px-4 rounded-full transition-all transform hover:scale-110">
-                <i class="fab fa-instagram text-white text-xl"></i>
-              </a>
-              <a href="https://www.linkedin.com/in/telangana-tpo-consortium-5a6b9927b/"
-                class="bg-blue-700 hover:bg-blue-800 py-3 px-4 rounded-full transition-all transform hover:scale-110">
-                <i class="fab fa-linkedin-in text-white text-xl"></i>
-              </a>
-            </div>
+          <!-- Benefit Card 3 -->
+          <div
+            class="bg-consortium-blue-dark bg-opacity-80 rounded-lg p-5 shadow-md hover:shadow-lg transition-all transform hover:-translate-y-1">
+            <h3 class="text-xl font-bold text-yellow-500 mb-3">Professional Development & Training</h3>
+            <ul class="space-y-2">
+              <li class="flex items-start">
+                <span class="text-green-400 mr-2">✓</span>
+                <span class="text-cyan-200">Attend exclusive workshops, training sessions, and certification
+                  programs.</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-green-400 mr-2">✓</span>
+                <span class="text-cyan-200">Learn from industry experts, soft skills trainers, and HR
+                  specialists.</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-green-400 mr-2">✓</span>
+                <span class="text-cyan-200">Gain knowledge on AI-driven hiring and interview techniques.</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Benefit Card 4 -->
+          <div
+            class="bg-consortium-blue-dark bg-opacity-80 rounded-lg p-5 shadow-md hover:shadow-lg transition-all transform hover:-translate-y-1">
+            <h3 class="text-xl font-bold text-yellow-500 mb-3">Increased Institutional Visibility</h3>
+            <ul class="space-y-2">
+              <li class="flex items-start">
+                <span class="text-green-400 mr-2">✓</span>
+                <span class="text-cyan-200">Showcase your institution through TTPOC platforms and job fairs.</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-green-400 mr-2">✓</span>
+                <span class="text-cyan-200">Get recognition for best placement practices.</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-green-400 mr-2">✓</span>
+                <span class="text-cyan-200">Enhance your college's reputation by attracting recruiters.</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Benefit Card 5 -->
+          <div
+            class="bg-consortium-blue-dark bg-opacity-80 rounded-lg p-5 shadow-md hover:shadow-lg transition-all transform hover:-translate-y-1">
+            <h3 class="text-xl font-bold text-yellow-500 mb-3">Entrepreneurship & Industry Connect</h3>
+            <ul class="space-y-2">
+              <li class="flex items-start">
+                <span class="text-green-400 mr-2">✓</span>
+                <span class="text-cyan-200">Encourage students to explore entrepreneurship opportunities.</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-green-400 mr-2">✓</span>
+                <span class="text-cyan-200">Facilitate guest lectures, mentorship programs, and industry
+                  visits.</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-green-400 mr-2">✓</span>
+                <span class="text-cyan-200">Connect with government and private sector initiatives.</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Benefit Card 6 -->
+          <div
+            class="bg-consortium-blue-dark bg-opacity-80 rounded-lg p-5 shadow-md hover:shadow-lg transition-all transform hover:-translate-y-1">
+            <h3 class="text-xl font-bold text-yellow-500 mb-3">Recognition & Career Growth</h3>
+            <ul class="space-y-2">
+              <li class="flex items-start">
+                <span class="text-green-400 mr-2">✓</span>
+                <span class="text-cyan-200">Get opportunities for leadership roles within TTPOC.</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-green-400 mr-2">✓</span>
+                <span class="text-cyan-200">Receive appreciation for placement achievements.</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-green-400 mr-2">✓</span>
+                <span class="text-cyan-200">Build a strong personal brand in academic and corporate sectors.</span>
+              </li>
+            </ul>
           </div>
         </div>
+      </div>
 
-        <!-- Copyright -->
-        <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400">
-          <p>© 2025 Telangana TPO Consortium. All Rights Reserved.</p>
+      <!-- Registration Links -->
+      <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-6 mb-10">
+        <a href="membership.pdf" download
+          class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-full shadow-lg transition-all flex items-center w-64 justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10" />
+          </svg>
+          Download Form
+        </a>
+
+        <a href="https://tinyurl.com/TTPOCMembership" target="_blank"
+          class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-full shadow-lg transition-all flex items-center w-64 justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+          Register Now
+        </a>
+      </div>
+
+
+
+      <!-- Bank Details -->
+      <div class="bg-white rounded-lg shadow-lg p-6 mb-10 transform hover:shadow-xl transition-all">
+        <h3 class="text-2xl font-bold text-consortium-blue text-center mb-6 border-b pb-2">Bank Details</h3>
+        <div class="grid md:grid-cols-2 gap-4">
+          <div class="flex items-center">
+            <span class="font-semibold text-consortium-blue w-1/3">Bank Name:</span>
+            <span class="text-gray-700">UNION BANK</span>
+          </div>
+          <div class="flex items-center">
+            <span class="font-semibold text-consortium-blue w-1/3">Account Number:</span>
+            <span class="text-gray-700">124611010000045</span>
+          </div>
+          <div class="flex items-center md:col-span-2">
+            <span class="font-semibold text-consortium-blue w-1/6">Account Name:</span>
+            <span class="text-gray-700">TELANGANA TRAINING & PLACEMENT OFFICERS CONSORTIUM</span>
+          </div>
+          <div class="flex items-center">
+            <span class="font-semibold text-consortium-blue w-1/3">IFSC Code:</span>
+            <span class="text-gray-700">UBIN0812463</span>
+          </div>
         </div>
       </div>
-    </footer>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 py-12 pb-2">
+    <div class="container mx-auto max-w-6xl px-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Column 1: About -->
+        <div>
+          <h3 class="text-xl font-bold mb-4 text-consortium-blue-light">About Us</h3>
+          <p class="text-gray-300 mb-4">
+            Telangana TPO Consortium is a collaborative platform for Training & Placement Officers
+            across
+            the state to
+            enhance placement opportunities for students.
+          </p>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div>
+          <h3 class="text-xl font-bold mb-4 text-consortium-blue-light">Quick Links</h3>
+          <ul class="space-y-2">
+            <li><a href="/aboutUs.html" class="text-gray-300 hover:text-white transition">About Us</a>
+            </li>
+            <li><a href="/events.html" class="text-gray-300 hover:text-white transition">Events</a></li>
+            <li><a href="/committee.html" class="text-gray-300 hover:text-white transition">Committee</a>
+            </li>
+            <li><a href="/membership.html" class="text-gray-300 hover:text-white transition">Membership</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Contact & Social -->
+        <div>
+          <h3 class="text-xl font-bold mb-4 text-consortium-blue-light">Connect With Us</h3>
+          <p class="text-gray-300 mb-4">Follow us on social media for updates and announcements</p>
+
+          <!-- Social Media Icons -->
+          <div class="flex gap-4">
+            <a href="https://twitter.com/ttpoconsortium"
+              class="bg-blue-500 hover:bg-blue-600 py-3 px-4 rounded-full transition-all transform hover:scale-110">
+              <i class="fab fa-twitter text-white text-xl"></i>
+            </a>
+            <a href="https://www.instagram.com/ttpoconsortium/"
+              class="bg-gradient-to-r from-purple-500 to-pink-500 py-3 px-4 rounded-full transition-all transform hover:scale-110">
+              <i class="fab fa-instagram text-white text-xl"></i>
+            </a>
+            <a href="https://www.linkedin.com/company/telangana-tpo-consortium/"
+              class="bg-blue-700 hover:bg-blue-800 py-3 px-4 rounded-full transition-all transform hover:scale-110">
+              <i class="fab fa-linkedin-in text-white text-xl"></i>
+            </a>
+            <a href="https://www.youtube.com/@ttpoconsortium/"
+              class="bg-red-700 hover:bg-red-800 py-3 px-4 rounded-full transition-all transform hover:scale-110">
+              <i class="fab fa-youtube text-white text-xl"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400">
+        <p>© 2025 Telangana TPO Consortium. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
 
   </div>
 </body>

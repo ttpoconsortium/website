@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./js/navbar.js"></script>
-	<link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/navbar.css">
     <style>
         body {
             background: url('https://res.cloudinary.com/dbenkbws8/image/upload/v1691485885/Rectangle_2_c5utnz.png') no-repeat center center fixed;
@@ -64,462 +64,498 @@
     <div class="relative z-10 w-full">
         <!-- Navbar -->
         <div class="w-full bg-consortium-blue-dark bg-opacity-90">
-			<!-- Mobile View: Logo and Title on left, Hamburger on right -->
-			<div class="flex sm:hidden flex-row justify-between items-center py-2 px-4">
-			  <div class="flex items-center">
-				<img class="h-16 mr-2 -mt-2"
-				  src="https://res.cloudinary.com/dbenkbws8/image/upload/v1691501311/Asset_3_1_ay28ar.png" />
-				<h1 class="font-fira-sans text-white text-center font-bold tracking-wide text-[16px]">
-					TELANGANA TRAINING & PLACEMENT OFFICERS CONSORTIUM
-				</h1>
-			  </div>
-			  
-			  <!-- Mobile Navigation Hamburger Button -->
-			  <div>
-				<button id="menu-toggle" class="text-white focus:outline-none">
-				  <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-				  </svg>
-				</button>
-			  </div>
-			</div>
-			
-			<!-- Desktop View: Centered Logo and Title -->
-			<div class="hidden sm:flex flex-row justify-center items-center px-8 py-3">
-                <img class="h-28 mx-3 -mt-2"
-                  src="https://res.cloudinary.com/dbenkbws8/image/upload/v1691501311/Asset_3_1_ay28ar.png" />
-            
-                <div class="flex flex-col items-start">
-                  <h1 class="font-fira-sans text-white font-bold tracking-wide text-[28px]">
-                    TELANGANA TRAINING & PLACEMENT OFFICERS CONSORTIUM
-                  </h1>
-                  <ul class="flex gap-5 mt-2">
-                    <li><a href="/index.html" class="text-gray-400 font-bold text-[14px] hover:text-white">HOME</a></li>
-                    <li><a href="/aboutUs.html" class="text-gray-400 font-bold text-[14px] hover:text-white">ABOUT US</a></li>
-                    <li><a href="/events.html" class="text-gray-400 font-bold text-[14px] hover:text-white">EVENTS</a></li>
-                    <li><a href="/committee.html" class="text-gray-400 font-bold text-[14px] hover:text-white">COMMITTEE</a></li>
-                    <li><a href="/members.html" class="text-white font-bold text-[14px] hover:text-white">MEMBERS</a></li>
-                    <li><a href="/membership.html" class="text-gray-400 font-bold text-[14px] hover:text-white">MEMBER REGISTRATION</a></li>
-                    <li><a href="/meetings.html" class="text-gray-400 font-bold text-[14px] hover:text-white">MEETINGS</a></li>
-                    <li><a href="/gallery.html" class="text-gray-400 font-bold text-[14px] hover:text-white">GALLERY</a></li>
-                    <li><a href="/contact.html" class="text-gray-400 font-bold text-[14px] hover:text-white">CONTACT</a></li>
-                  </ul>
+            <!-- Mobile View: Logo and Title on left, Hamburger on right -->
+            <div class="flex sm:hidden flex-row justify-between items-center py-2 px-4">
+                <div class="flex items-center">
+                    <img class="h-16 mr-2 -mt-2"
+                        src="https://res.cloudinary.com/dbenkbws8/image/upload/v1691501311/Asset_3_1_ay28ar.png" />
+                    <h1 class="font-fira-sans text-white text-center font-bold tracking-wide text-[16px]">
+                        TELANGANA TRAINING & PLACEMENT OFFICERS CONSORTIUM
+                    </h1>
                 </div>
-              </div>
-		  </div>
-		  
-		  <!-- Mobile Navigation Overlay (Hidden by default) -->
-		  <div id="mobile-menu" class="fixed inset-0 bg-consortium-blue-dark bg-opacity-95 z-50 transform -translate-y-full opacity-0 pointer-events-none">
-			<!-- Close Button (X Mark) -->
-			<div class="absolute top-6 right-6">
-			  <button id="close-menu" class="text-white p-2 focus:outline-none rounded-full hover:bg-consortium-blue-light transition-colors duration-300">
-				<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-				  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path>
-				</svg>
-			  </button>
-			</div>
-		  
-			<!-- Navigation Links -->
-			<div class="flex flex-col h-full justify-center items-center">
-			  <ul class="space-y-6 text-center">
-				<li><a href="/index.html" class="text-gray-400 font-bold text-2xl hover:text-white transition-colors duration-300">HOME</a></li>
-				<li><a href="/aboutUs.html" class="text-gray-400 font-bold text-2xl hover:text-white transition-colors duration-300">ABOUT US</a></li>
-				<li><a href="/events.html" class="text-gray-400 font-bold text-2xl hover:text-white transition-colors duration-300">EVENTS</a></li>
-				<li><a href="/committee.html" class="text-gray-400 font-bold text-2xl hover:text-white transition-colors duration-300">COMMITTEE</a></li>
-				<li><a href="/members.html" class="text-white font-bold text-2xl hover:text-white transition-colors duration-300">MEMBERS</a></li>
-				<li><a href="/membership.html" class="text-gray-400 font-bold text-2xl hover:text-white transition-colors duration-300">MEMBER REGISTRATION</a></li>
-				<li><a href="/meetings.html" class="text-gray-400 font-bold text-2xl hover:text-white transition-colors duration-300">MEETINGS</a></li>
-				<li><a href="/gallery.html" class="text-gray-400 font-bold text-2xl hover:text-white transition-colors duration-300">GALLERY</a></li>
-				<li><a href="/contact.html" class="text-gray-400 font-bold text-2xl hover:text-white transition-colors duration-300">CONTACT</a></li>
-			  </ul>
-			</div>
-		  </div>
-		</div>
 
-        <!-- Members section -->
-        <div class="flex flex-col py-4 justify-center my-10 capitalize-text">
-            <p class="text-white text-center py-3 text-[25px] font-bold">MEMBERS</p>
-            <div class="mx-auto text-white ">
-                <table class="w-full mb-7 border-2">
-                    <tr>
-                        <th>FULL NAME</th>
-                        <th>DESIGNATION</th>
-                        <th>COLLEGE NAME</th>
-                    </tr>
-                    <tr>
-                        <td>Dr T Srinivasa Rao</td>
-                        <td>Director - Training and Placements</td>
-                        <td>ACE Engineering College</td>
-                    </tr>
-                    <tr>
-                        <td>Dr Siddhartha Ghosh</td>
-                        <td>Head of Training and Placements</td>
-                        <td>Anurag University</td>
-                    </tr>
-                    <tr>
-                        <td>Kaparthi</td>
-                        <td>Training & Placement Officer</td>
-                        <td>AVN Institute of Science and Technology</td>
-                    </tr>
-                    <tr>
-                        <td>Dr. Hafeez Basha Ranipet</td>
-                        <td>Director - Corporate Relations, Training & Placements</td>
-                        <td>Ashoka School of Business (ASB Hyderabad)</td>
-                    </tr>
-                    <tr>
-                        <td>Daram Muralidhara Reddy</td>
-                        <td>Dean</td>
-                        <td>Ashoka Women's Engineering College</td>
-                    </tr>
-                    <tr>
-                        <td>Sumedha</td>
-                        <td>Associate Director Corporate Relations and Placements</td>
-                        <td>Aurora College of Engineering</td>
-                    </tr>
-                    <tr>
-                        <td>Md Aleemuddin</td>
-                        <td>Training and Placement Officer</td>
-                        <td>Avanthi Degree and PG College</td>
-                    </tr>
-                    <tr>
-                        <td>Sree Vidya</td>
-                        <td>Head - Training and Placements</td>
-                        <td>BVC Group of Institutions</td>
-                    </tr>
-                    <tr>
-                        <td>Rajesh Bobburi</td>
-                        <td>Director - Corporate Relations</td>
-                        <td>BVC Group of Institutions</td>
-                    </tr>
-                    <tr>
-                        <td>Ms. Vijaya Mair</td>
-                        <td>Associate Dean & Campus Relations</td>
-                        <td>CVR COLLEGE OF ENGINEERING</td>
-                    </tr>
-                    <tr>
-                        <td>Mahesh Kumar</td>
-                        <td>Manager Campus Relations</td>
-                        <td>CVR COLLEGE OF ENGINEERING</td>
-                    </tr>
-                    <tr>
-                        <td>Jasvinder Kaur</td>
-                        <td>Dean Placements</td>
-                        <td>G Pullaiah College of Engineering and Technology</td>
-                    </tr>
-                    <tr>
-                        <td>E N V S KISHORE</td>
-                        <td>Associate Director Corporate Relations</td>
-                        <td>Geethanjali College Of Engineering & Technology</td>
-                    </tr>
-                    <tr>
-                        <td>Dr Vinay Chopra</td>
-                        <td>Director Training and Placement</td>
-                        <td>Guru Nanak Institutions</td>
-                    </tr>
-                    <tr>
-                        <td>Ananth</td>
-                        <td>Assistant Professor</td>
-                        <td>HITM Hyderabad</td>
-                    </tr>
-                    <tr>
-                        <td>Rajesh Kumar Annarapu</td>
-                        <td>Assistant General Manager - Corporate Relations & Placements</td>
-                        <td>ICFAI Tech (ICFAI University)</td>
-                    </tr>
-                    <tr>
-                        <td>G. SANTOSHI</td>
-                        <td>Placement Officer</td>
-                        <td>INDIAN INSTITUTE OF MANAGEMENT AND COMMERCE, KHAIRATABAD, HYDERABAD</td>
-                    </tr>
-                    <tr>
-                        <td>MATLA ELI MARTEENA</td>
-                        <td>Assistant TPO & Assistant Professor</td>
-                        <td>INSTITUTE OF AERONAUTICAL ENGINEERING COLLEGE</td>
-                    </tr>
-                    <tr>
-                        <td>Desham Rajashekar</td>
-                        <td>Manager Corporate Relations</td>
-                        <td>Institute of Management Technology Hyderabad</td>
-                    </tr>
-                    <tr>
-                        <td>Jagadeesh Reddy</td>
-                        <td>Director Placement</td>
-                        <td>ISTS Women's Engineering College</td>
-                    </tr>
-                    <tr>
-                        <td>S. Chaitanya Bharathi</td>
-                        <td>Placement Officer</td>
-                        <td>Keshav Memorial Institute of Commerce and Sciences</td>
-                    </tr>
-                    <tr>
-                        <td>Dr. K Mahalaxmi</td>
-                        <td>Dean CIII</td>
-                        <td>KIT, Chennai</td>
-                    </tr>
-                    <tr>
-                        <td>Sujit Kumar Rath</td>
-                        <td>Director, T&P</td>
-                        <td>Lakireddy Bali Reddy College of Engineering</td>
-                    </tr>
-                    <tr>
-                        <td>Diviti Srikanth</td>
-                        <td>Corporate Relations</td>
-                        <td>Mahindra University</td>
-                    </tr>
-                    <tr>
-                        <td>Dr. M. Ajay Kumar</td>
-                        <td>IIC Coordinator</td>
-                        <td>Malla Reddy College of Engineering for Women</td>
-                    </tr>
-                    <tr>
-                        <td>SRINIVAS. A</td>
-                        <td>Dean Academics</td>
-                        <td>Malla Reddy Engineering College</td>
-                    </tr>
-                    <tr>
-                        <td>V. Bharath Simha Reddy</td>
-                        <td>Training & Placement Officer</td>
-                        <td>Malla Reddy Engineering College and Management Sciences, Medchal, 501401</td>
-                    </tr>
-                    <tr>
-                        <td>Dr. M. Jaganathan Muthusamy</td>
-                        <td>Professor HOD</td>
-                        <td>Malla Reddy Institute of Technology and Sciences</td>
-                    </tr>
-                    <tr>
-                        <td>Kiran Kumar</td>
-                        <td>Deputy Director</td>
-                        <td>Malla Reddy University</td>
-                    </tr>
-                    <tr>
-                        <td>Rajani Prashanth</td>
-                        <td>TPO</td>
-                        <td>Matrusri Engineering College</td>
-                    </tr>
-                    <tr>
-                        <td>Dr V. Sridhar</td>
-                        <td>Training & Placement Officer</td>
-                        <td>Maturi Venkata Subba Rao (MVSR) Engineering College</td>
-                    </tr>
-                    <tr>
-                        <td>K M Rajini</td>
-                        <td>TPO</td>
-                        <td>Muffakam Jah College of Engineering and Technology</td>
-                    </tr>
-                    <tr>
-                        <td>Dr SHOBAN MUDE</td>
-                        <td>Associate Professor & Director-IR</td>
-                        <td>NARSIMHA REDDY ENGINEERING COLLEGE</td>
-                    </tr>
-                    <tr>
-                        <td>Dr. Viswaprakash Babu</td>
-                        <td>TPO</td>
-                        <td>Pallavi Engineering College, Nagole, Hyderabad</td>
-                    </tr>
-                    <tr>
-                        <td>Samyuktha Vedantham</td>
-                        <td>Placement Head</td>
-                        <td>RBVRR Women's College</td>
-                    </tr>
-                    <tr>
-                        <td>Dr. K R Satyanarayana</td>
-                        <td>Dean T&P</td>
-                        <td>Sagi Rama Krishnam Raju Engineering College</td>
-                    </tr>
-                    <tr>
-                        <td>Neelam Singh</td>
-                        <td>Head - Training and Placement</td>
-                        <td>Samskruti College of Engineering and Technology</td>
-                    </tr>
-                    <tr>
-                        <td>K. SUBBA RAO</td>
-                        <td>TRAINING & PLACEMENT OFFICER</td>
-                        <td>SAROJINI NAIDU VANITA MAHA VIDYALAYA</td>
-                    </tr>
-                    <tr>
-                        <td>Prabha Shukla</td>
-                        <td>Asst. Training & Placement Officer</td>
-                        <td>Sarojini Naidu Vanita Maha Vidyalaya</td>
-                    </tr>
-                    <tr>
-                        <td>G Maruthy Raju</td>
-                        <td>Training and Placement Officer</td>
-                        <td>SCIENT Institute of Technology</td>
-                    </tr>
-                    <tr>
-                        <td>MN Hari Krishna</td>
-                        <td>TPO</td>
-                        <td>Seshadri Rao Gudlavalleru Engineering College</td>
-                    </tr>
-                    <tr>
-                        <td>K SRINIVAS</td>
-                        <td>HEAD-PLACEMENTS</td>
-                        <td>SIDDHARTHA (academy of higher Education)</td>
-                    </tr>
-                    <tr>
-                        <td>Malyala Prabhakar</td>
-                        <td>Training and Placement Officer</td>
-                        <td>Siddhartha Institute of Engineering</td>
-                    </tr>
-                    <tr>
-                        <td>Dr. HEMA</td>
-                        <td>PLACEMENT DIRECTOR</td>
-                        <td>SIVA SIVANI DEGREE COLLEGE - AUTONOMOUS</td>
-                    </tr>
-                    <tr>
-                        <td>Sai Likhith</td>
-                        <td>Head IIIC</td>
-                        <td>Sphoorthy Engineering College</td>
-                    </tr>
-                    <tr>
-                        <td>Ram Deshmukh</td>
-                        <td>TPO</td>
-                        <td>SR University</td>
-                    </tr>
-                    <tr>
-                        <td>Lakshmanarao Pagolu</td>
-                        <td>General Manager - Placements</td>
-                        <td>SR University</td>
-                    </tr>
-                    <tr>
-                        <td>Surya Teja K</td>
-                        <td>Manager- Industry Relations</td>
-                        <td>SR University</td>
-                    </tr>
-                    <tr>
-                        <td>Dr R Ashok Kumar</td>
-                        <td>TPO</td>
-                        <td>Sree Dattha Group of Educational Institutions</td>
-                    </tr>
-                    <tr>
-                        <td>Mohammed Imran</td>
-                        <td>Director Training and Placement</td>
-                        <td>Sree Dattha Group of Educational Institutions</td>
-                    </tr>
-                    <tr>
-                        <td>NOORA HEMANTH KUMAR</td>
-                        <td>PLACEMENT MANAGER</td>
-                        <td>SreeNidhi Institute of Science and Technology</td>
-                    </tr>
-                    <tr>
-                        <td>Anish Srivastava</td>
-                        <td>Dean Corporate Relations</td>
-                        <td>Sreyas Institute of Engineering and Technology</td>
-                    </tr>
-                    <tr>
-                        <td>R Venkateswar</td>
-                        <td>TPO</td>
-                        <td>Sri Indu Institutions</td>
-                    </tr>
-                    <tr>
-                        <td>Dr. Nandoori Srikanth</td>
-                        <td>Training & Placement Officer</td>
-                        <td>St. Peter's Engineering College</td>
-                    </tr>
-                    <tr>
-                        <td>Nicholas D Ross</td>
-                        <td>Head Corporate Relations and MDP</td>
-                        <td>Symbiosis Institute of Business Management</td>
-                    </tr>
-                    <tr>
-                        <td>Barkat Amirali Jiwani</td>
-                        <td>Training and Placement Head</td>
-                        <td>Vaagdevi College of Engineering</td>
-                    </tr>
-                    <tr>
-                        <td>Dr Madhav U</td>
-                        <td>HEAD- TRAINING & PLACEMENTS</td>
-                        <td>VASIREDDY VENKATADRI INSTITUTE OF TECHNOLOGY</td>
-                    </tr>
-                    <tr>
-                        <td>Mr. Anil</td>
-                        <td>Director IIC</td>
-                        <td>VBIT</td>
-                    </tr>
-                    <tr>
-                        <td class="capitalize-text">E Bharath Kumar Goud</td>
-                        <td>TRAINING AND PLACEMENT OFFICER</td>
-                        <td>VEDA DEGREE COLLEGE</td>
-                    </tr>
-                    <tr>
-                        <td>Shikha Kaushal</td>
-                        <td>Training and placement officer</td>
-                        <td>Vidya Jyothi Institute of Technology</td>
-                    </tr>
-                    <tr>
-                        <td>Dr Praveen Kumar Yechuri</td>
-                        <td>Manager-Training & Placements</td>
-                        <td>Vidya Jyothi Institute of Technology</td>
-                    </tr>
-                    <tr>
-                        <td>Dharmender Gogikar</td>
-                        <td>Head- Placements and Corporate Relations</td>
-                        <td>Vishwa Vishwani Business School</td>
-                    </tr>
-                </table>
+                <!-- Mobile Navigation Hamburger Button -->
+                <div>
+                    <button id="menu-toggle" class="text-white focus:outline-none">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Desktop View: Centered Logo and Title -->
+            <div class="hidden sm:flex flex-row justify-center items-center px-8 py-3">
+                <img class="h-28 mx-3 -mt-2"
+                    src="https://res.cloudinary.com/dbenkbws8/image/upload/v1691501311/Asset_3_1_ay28ar.png" />
+
+                <div class="flex flex-col items-start">
+                    <h1 class="font-fira-sans text-white font-bold tracking-wide text-[28px]">
+                        TELANGANA TRAINING & PLACEMENT OFFICERS CONSORTIUM
+                    </h1>
+                    <ul class="flex gap-5 mt-2">
+                        <li><a href="/index.html" class="text-gray-400 font-bold text-[14px] hover:text-white">HOME</a>
+                        </li>
+                        <li><a href="/aboutUs.html" class="text-gray-400 font-bold text-[14px] hover:text-white">ABOUT
+                                US</a></li>
+                        <li><a href="/events.html"
+                                class="text-gray-400 font-bold text-[14px] hover:text-white">EVENTS</a></li>
+                        <li><a href="/committee.html"
+                                class="text-gray-400 font-bold text-[14px] hover:text-white">COMMITTEE</a></li>
+                        <li><a href="/members.html"
+                                class="text-white font-bold text-[14px] hover:text-white">MEMBERS</a></li>
+                        <li><a href="/membership.html"
+                                class="text-gray-400 font-bold text-[14px] hover:text-white">MEMBER REGISTRATION</a>
+                        </li>
+                        <li><a href="/meetings.html"
+                                class="text-gray-400 font-bold text-[14px] hover:text-white">MEETINGS</a></li>
+                        <li><a href="/gallery.html"
+                                class="text-gray-400 font-bold text-[14px] hover:text-white">GALLERY</a></li>
+                        <li><a href="/contact.html"
+                                class="text-gray-400 font-bold text-[14px] hover:text-white">CONTACT</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
 
-        <!-- Footer -->
-        <footer class="bg-gray-800 py-12 pb-2">
-            <div class="container mx-auto max-w-6xl px-4">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <!-- Column 1: About -->
-                    <div>
-                        <h3 class="text-xl font-bold mb-4 text-consortium-blue-light">About Us</h3>
-                        <p class="text-gray-300 mb-4">
-                            Telangana TPO Consortium is a collaborative platform for Training & Placement Officers
-                            across
-                            the state to
-                            enhance placement opportunities for students.
-                        </p>
-                    </div>
+        <!-- Mobile Navigation Overlay (Hidden by default) -->
+        <div id="mobile-menu"
+            class="fixed inset-0 bg-consortium-blue-dark bg-opacity-95 z-50 transform -translate-y-full opacity-0 pointer-events-none">
+            <!-- Close Button (X Mark) -->
+            <div class="absolute top-6 right-6">
+                <button id="close-menu"
+                    class="text-white p-2 focus:outline-none rounded-full hover:bg-consortium-blue-light transition-colors duration-300">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                            d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
 
-                    <!-- Column 2: Quick Links -->
-                    <div>
-                        <h3 class="text-xl font-bold mb-4 text-consortium-blue-light">Quick Links</h3>
-                        <ul class="space-y-2">
-                            <li><a href="/aboutUs.html" class="text-gray-300 hover:text-white transition">About Us</a>
-                            </li>
-                            <li><a href="/events.html" class="text-gray-300 hover:text-white transition">Events</a></li>
-                            <li><a href="/committee.html"
-                                    class="text-gray-300 hover:text-white transition">Committee</a>
-                            </li>
-                            <li><a href="/membership.html"
-                                    class="text-gray-300 hover:text-white transition">Membership</a>
-                            </li>
-                        </ul>
-                    </div>
+            <!-- Navigation Links -->
+            <div class="flex flex-col h-full justify-center items-center">
+                <ul class="space-y-6 text-center">
+                    <li><a href="/index.html"
+                            class="text-gray-400 font-bold text-2xl hover:text-white transition-colors duration-300">HOME</a>
+                    </li>
+                    <li><a href="/aboutUs.html"
+                            class="text-gray-400 font-bold text-2xl hover:text-white transition-colors duration-300">ABOUT
+                            US</a></li>
+                    <li><a href="/events.html"
+                            class="text-gray-400 font-bold text-2xl hover:text-white transition-colors duration-300">EVENTS</a>
+                    </li>
+                    <li><a href="/committee.html"
+                            class="text-gray-400 font-bold text-2xl hover:text-white transition-colors duration-300">COMMITTEE</a>
+                    </li>
+                    <li><a href="/members.html"
+                            class="text-white font-bold text-2xl hover:text-white transition-colors duration-300">MEMBERS</a>
+                    </li>
+                    <li><a href="/membership.html"
+                            class="text-gray-400 font-bold text-2xl hover:text-white transition-colors duration-300">MEMBER
+                            REGISTRATION</a></li>
+                    <li><a href="/meetings.html"
+                            class="text-gray-400 font-bold text-2xl hover:text-white transition-colors duration-300">MEETINGS</a>
+                    </li>
+                    <li><a href="/gallery.html"
+                            class="text-gray-400 font-bold text-2xl hover:text-white transition-colors duration-300">GALLERY</a>
+                    </li>
+                    <li><a href="/contact.html"
+                            class="text-gray-400 font-bold text-2xl hover:text-white transition-colors duration-300">CONTACT</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
-                    <!-- Column 3: Contact & Social -->
-                    <div>
-                        <h3 class="text-xl font-bold mb-4 text-consortium-blue-light">Connect With Us</h3>
-                        <p class="text-gray-300 mb-4">Follow us on social media for updates and announcements</p>
+    <!-- Members section -->
+    <div class="flex flex-col py-4 justify-center my-10 capitalize-text">
+        <p class="text-white text-center py-3 text-[25px] font-bold">MEMBERS</p>
+        <div class="mx-auto text-white ">
+            <table class="w-full mb-7 border-2">
+                <tr>
+                    <th>FULL NAME</th>
+                    <th>DESIGNATION</th>
+                    <th>COLLEGE NAME</th>
+                </tr>
+                <tr>
+                    <td>Dr T Srinivasa Rao</td>
+                    <td>Director - Training and Placements</td>
+                    <td>ACE Engineering College</td>
+                </tr>
+                <tr>
+                    <td>Dr Siddhartha Ghosh</td>
+                    <td>Head of Training and Placements</td>
+                    <td>Anurag University</td>
+                </tr>
+                <tr>
+                    <td>Kaparthi</td>
+                    <td>Training & Placement Officer</td>
+                    <td>AVN Institute of Science and Technology</td>
+                </tr>
+                <tr>
+                    <td>Dr. Hafeez Basha Ranipet</td>
+                    <td>Director - Corporate Relations, Training & Placements</td>
+                    <td>Ashoka School of Business (ASB Hyderabad)</td>
+                </tr>
+                <tr>
+                    <td>Daram Muralidhara Reddy</td>
+                    <td>Dean</td>
+                    <td>Ashoka Women's Engineering College</td>
+                </tr>
+                <tr>
+                    <td>Sumedha</td>
+                    <td>Associate Director Corporate Relations and Placements</td>
+                    <td>Aurora College of Engineering</td>
+                </tr>
+                <tr>
+                    <td>Md Aleemuddin</td>
+                    <td>Training and Placement Officer</td>
+                    <td>Avanthi Degree and PG College</td>
+                </tr>
+                <tr>
+                    <td>Sree Vidya</td>
+                    <td>Head - Training and Placements</td>
+                    <td>BVC Group of Institutions</td>
+                </tr>
+                <tr>
+                    <td>Rajesh Bobburi</td>
+                    <td>Director - Corporate Relations</td>
+                    <td>BVC Group of Institutions</td>
+                </tr>
+                <tr>
+                    <td>Ms. Vijaya Mair</td>
+                    <td>Associate Dean & Campus Relations</td>
+                    <td>CVR COLLEGE OF ENGINEERING</td>
+                </tr>
+                <tr>
+                    <td>Mahesh Kumar</td>
+                    <td>Manager Campus Relations</td>
+                    <td>CVR COLLEGE OF ENGINEERING</td>
+                </tr>
+                <tr>
+                    <td>Jasvinder Kaur</td>
+                    <td>Dean Placements</td>
+                    <td>G Pullaiah College of Engineering and Technology</td>
+                </tr>
+                <tr>
+                    <td>E N V S KISHORE</td>
+                    <td>Associate Director Corporate Relations</td>
+                    <td>Geethanjali College Of Engineering & Technology</td>
+                </tr>
+                <tr>
+                    <td>Dr Vinay Chopra</td>
+                    <td>Director Training and Placement</td>
+                    <td>Guru Nanak Institutions</td>
+                </tr>
+                <tr>
+                    <td>Ananth</td>
+                    <td>Assistant Professor</td>
+                    <td>HITM Hyderabad</td>
+                </tr>
+                <tr>
+                    <td>Rajesh Kumar Annarapu</td>
+                    <td>Assistant General Manager - Corporate Relations & Placements</td>
+                    <td>ICFAI Tech (ICFAI University)</td>
+                </tr>
+                <tr>
+                    <td>G. SANTOSHI</td>
+                    <td>Placement Officer</td>
+                    <td>INDIAN INSTITUTE OF MANAGEMENT AND COMMERCE, KHAIRATABAD, HYDERABAD</td>
+                </tr>
+                <tr>
+                    <td>MATLA ELI MARTEENA</td>
+                    <td>Assistant TPO & Assistant Professor</td>
+                    <td>INSTITUTE OF AERONAUTICAL ENGINEERING COLLEGE</td>
+                </tr>
+                <tr>
+                    <td>Desham Rajashekar</td>
+                    <td>Manager Corporate Relations</td>
+                    <td>Institute of Management Technology Hyderabad</td>
+                </tr>
+                <tr>
+                    <td>Jagadeesh Reddy</td>
+                    <td>Director Placement</td>
+                    <td>ISTS Women's Engineering College</td>
+                </tr>
+                <tr>
+                    <td>S. Chaitanya Bharathi</td>
+                    <td>Placement Officer</td>
+                    <td>Keshav Memorial Institute of Commerce and Sciences</td>
+                </tr>
+                <tr>
+                    <td>Dr. K Mahalaxmi</td>
+                    <td>Dean CIII</td>
+                    <td>KIT, Chennai</td>
+                </tr>
+                <tr>
+                    <td>Sujit Kumar Rath</td>
+                    <td>Director, T&P</td>
+                    <td>Lakireddy Bali Reddy College of Engineering</td>
+                </tr>
+                <tr>
+                    <td>Diviti Srikanth</td>
+                    <td>Corporate Relations</td>
+                    <td>Mahindra University</td>
+                </tr>
+                <tr>
+                    <td>Dr. M. Ajay Kumar</td>
+                    <td>IIC Coordinator</td>
+                    <td>Malla Reddy College of Engineering for Women</td>
+                </tr>
+                <tr>
+                    <td>SRINIVAS. A</td>
+                    <td>Dean Academics</td>
+                    <td>Malla Reddy Engineering College</td>
+                </tr>
+                <tr>
+                    <td>V. Bharath Simha Reddy</td>
+                    <td>Training & Placement Officer</td>
+                    <td>Malla Reddy Engineering College and Management Sciences, Medchal, 501401</td>
+                </tr>
+                <tr>
+                    <td>Dr. M. Jaganathan Muthusamy</td>
+                    <td>Professor HOD</td>
+                    <td>Malla Reddy Institute of Technology and Sciences</td>
+                </tr>
+                <tr>
+                    <td>Kiran Kumar</td>
+                    <td>Deputy Director</td>
+                    <td>Malla Reddy University</td>
+                </tr>
+                <tr>
+                    <td>Rajani Prashanth</td>
+                    <td>TPO</td>
+                    <td>Matrusri Engineering College</td>
+                </tr>
+                <tr>
+                    <td>Dr V. Sridhar</td>
+                    <td>Training & Placement Officer</td>
+                    <td>Maturi Venkata Subba Rao (MVSR) Engineering College</td>
+                </tr>
+                <tr>
+                    <td>K M Rajini</td>
+                    <td>TPO</td>
+                    <td>Muffakam Jah College of Engineering and Technology</td>
+                </tr>
+                <tr>
+                    <td>Dr SHOBAN MUDE</td>
+                    <td>Associate Professor & Director-IR</td>
+                    <td>NARSIMHA REDDY ENGINEERING COLLEGE</td>
+                </tr>
+                <tr>
+                    <td>Dr. Viswaprakash Babu</td>
+                    <td>TPO</td>
+                    <td>Pallavi Engineering College, Nagole, Hyderabad</td>
+                </tr>
+                <tr>
+                    <td>Samyuktha Vedantham</td>
+                    <td>Placement Head</td>
+                    <td>RBVRR Women's College</td>
+                </tr>
+                <tr>
+                    <td>Dr. K R Satyanarayana</td>
+                    <td>Dean T&P</td>
+                    <td>Sagi Rama Krishnam Raju Engineering College</td>
+                </tr>
+                <tr>
+                    <td>Neelam Singh</td>
+                    <td>Head - Training and Placement</td>
+                    <td>Samskruti College of Engineering and Technology</td>
+                </tr>
+                <tr>
+                    <td>K. SUBBA RAO</td>
+                    <td>TRAINING & PLACEMENT OFFICER</td>
+                    <td>SAROJINI NAIDU VANITA MAHA VIDYALAYA</td>
+                </tr>
+                <tr>
+                    <td>Prabha Shukla</td>
+                    <td>Asst. Training & Placement Officer</td>
+                    <td>Sarojini Naidu Vanita Maha Vidyalaya</td>
+                </tr>
+                <tr>
+                    <td>G Maruthy Raju</td>
+                    <td>Training and Placement Officer</td>
+                    <td>SCIENT Institute of Technology</td>
+                </tr>
+                <tr>
+                    <td>MN Hari Krishna</td>
+                    <td>TPO</td>
+                    <td>Seshadri Rao Gudlavalleru Engineering College</td>
+                </tr>
+                <tr>
+                    <td>K SRINIVAS</td>
+                    <td>HEAD-PLACEMENTS</td>
+                    <td>SIDDHARTHA (academy of higher Education)</td>
+                </tr>
+                <tr>
+                    <td>Malyala Prabhakar</td>
+                    <td>Training and Placement Officer</td>
+                    <td>Siddhartha Institute of Engineering</td>
+                </tr>
+                <tr>
+                    <td>Dr. HEMA</td>
+                    <td>PLACEMENT DIRECTOR</td>
+                    <td>SIVA SIVANI DEGREE COLLEGE - AUTONOMOUS</td>
+                </tr>
+                <tr>
+                    <td>Sai Likhith</td>
+                    <td>Head IIIC</td>
+                    <td>Sphoorthy Engineering College</td>
+                </tr>
+                <tr>
+                    <td>Ram Deshmukh</td>
+                    <td>TPO</td>
+                    <td>SR University</td>
+                </tr>
+                <tr>
+                    <td>Lakshmanarao Pagolu</td>
+                    <td>General Manager - Placements</td>
+                    <td>SR University</td>
+                </tr>
+                <tr>
+                    <td>Surya Teja K</td>
+                    <td>Manager- Industry Relations</td>
+                    <td>SR University</td>
+                </tr>
+                <tr>
+                    <td>Dr R Ashok Kumar</td>
+                    <td>TPO</td>
+                    <td>Sree Dattha Group of Educational Institutions</td>
+                </tr>
+                <tr>
+                    <td>Mohammed Imran</td>
+                    <td>Director Training and Placement</td>
+                    <td>Sree Dattha Group of Educational Institutions</td>
+                </tr>
+                <tr>
+                    <td>NOORA HEMANTH KUMAR</td>
+                    <td>PLACEMENT MANAGER</td>
+                    <td>SreeNidhi Institute of Science and Technology</td>
+                </tr>
+                <tr>
+                    <td>Anish Srivastava</td>
+                    <td>Dean Corporate Relations</td>
+                    <td>Sreyas Institute of Engineering and Technology</td>
+                </tr>
+                <tr>
+                    <td>R Venkateswar</td>
+                    <td>TPO</td>
+                    <td>Sri Indu Institutions</td>
+                </tr>
+                <tr>
+                    <td>Dr. Nandoori Srikanth</td>
+                    <td>Training & Placement Officer</td>
+                    <td>St. Peter's Engineering College</td>
+                </tr>
+                <tr>
+                    <td>Nicholas D Ross</td>
+                    <td>Head Corporate Relations and MDP</td>
+                    <td>Symbiosis Institute of Business Management</td>
+                </tr>
+                <tr>
+                    <td>Barkat Amirali Jiwani</td>
+                    <td>Training and Placement Head</td>
+                    <td>Vaagdevi College of Engineering</td>
+                </tr>
+                <tr>
+                    <td>Dr Madhav U</td>
+                    <td>HEAD- TRAINING & PLACEMENTS</td>
+                    <td>VASIREDDY VENKATADRI INSTITUTE OF TECHNOLOGY</td>
+                </tr>
+                <tr>
+                    <td>Mr. Anil</td>
+                    <td>Director IIC</td>
+                    <td>VBIT</td>
+                </tr>
+                <tr>
+                    <td class="capitalize-text">E Bharath Kumar Goud</td>
+                    <td>TRAINING AND PLACEMENT OFFICER</td>
+                    <td>VEDA DEGREE COLLEGE</td>
+                </tr>
+                <tr>
+                    <td>Shikha Kaushal</td>
+                    <td>Training and placement officer</td>
+                    <td>Vidya Jyothi Institute of Technology</td>
+                </tr>
+                <tr>
+                    <td>Dr Praveen Kumar Yechuri</td>
+                    <td>Manager-Training & Placements</td>
+                    <td>Vidya Jyothi Institute of Technology</td>
+                </tr>
+                <tr>
+                    <td>Dharmender Gogikar</td>
+                    <td>Head- Placements and Corporate Relations</td>
+                    <td>Vishwa Vishwani Business School</td>
+                </tr>
+            </table>
+        </div>
+    </div>
 
-                        <!-- Social Media Icons -->
-                        <div class="flex gap-4">
-                            <a href="https://twitter.com/ttpoconsortium"
-                                class="bg-blue-500 hover:bg-blue-600 py-3 px-4 rounded-full transition-all transform hover:scale-110">
-                                <i class="fab fa-twitter text-white text-xl"></i>
-                            </a>
-                            <a href="https://www.instagram.com/ttpoconsortium/"
-                                class="bg-gradient-to-r from-purple-500 to-pink-500 py-3 px-4 rounded-full transition-all transform hover:scale-110">
-                                <i class="fab fa-instagram text-white text-xl"></i>
-                            </a>
-                            <a href="https://www.linkedin.com/in/telangana-tpo-consortium-5a6b9927b/"
-                                class="bg-blue-700 hover:bg-blue-800 py-3 px-4 rounded-full transition-all transform hover:scale-110">
-                                <i class="fab fa-linkedin-in text-white text-xl"></i>
-                            </a>
-                        </div>
-                    </div>
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-12 pb-2">
+        <div class="container mx-auto max-w-6xl px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Column 1: About -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-consortium-blue-light">About Us</h3>
+                    <p class="text-gray-300 mb-4">
+                        Telangana TPO Consortium is a collaborative platform for Training & Placement Officers
+                        across
+                        the state to
+                        enhance placement opportunities for students.
+                    </p>
                 </div>
 
-                <!-- Copyright -->
-                <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400">
-                    <p>© 2025 Telangana TPO Consortium. All Rights Reserved.</p>
+                <!-- Column 2: Quick Links -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-consortium-blue-light">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="/aboutUs.html" class="text-gray-300 hover:text-white transition">About Us</a>
+                        </li>
+                        <li><a href="/events.html" class="text-gray-300 hover:text-white transition">Events</a></li>
+                        <li><a href="/committee.html" class="text-gray-300 hover:text-white transition">Committee</a>
+                        </li>
+                        <li><a href="/membership.html" class="text-gray-300 hover:text-white transition">Membership</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Contact & Social -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-consortium-blue-light">Connect With Us</h3>
+                    <p class="text-gray-300 mb-4">Follow us on social media for updates and announcements</p>
+
+                    <!-- Social Media Icons -->
+                    <div class="flex gap-4">
+                        <a href="https://twitter.com/ttpoconsortium"
+                            class="bg-blue-500 hover:bg-blue-600 py-3 px-4 rounded-full transition-all transform hover:scale-110">
+                            <i class="fab fa-twitter text-white text-xl"></i>
+                        </a>
+                        <a href="https://www.instagram.com/ttpoconsortium/"
+                            class="bg-gradient-to-r from-purple-500 to-pink-500 py-3 px-4 rounded-full transition-all transform hover:scale-110">
+                            <i class="fab fa-instagram text-white text-xl"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/telangana-tpo-consortium/"
+                            class="bg-blue-700 hover:bg-blue-800 py-3 px-4 rounded-full transition-all transform hover:scale-110">
+                            <i class="fab fa-linkedin-in text-white text-xl"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@ttpoconsortium/"
+                            class="bg-red-700 hover:bg-red-800 py-3 px-4 rounded-full transition-all transform hover:scale-110">
+                            <i class="fab fa-youtube text-white text-xl"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </footer>
+
+            <!-- Copyright -->
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400">
+                <p>© 2025 Telangana TPO Consortium. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
     </div>
 </body>
 
