@@ -23,7 +23,7 @@
         rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <link rel="stylesheet" href="../css/lightbox-custom.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="../js/navbar.js"></script>
     <link rel="stylesheet" href="../css/navbar.css">
@@ -367,6 +367,7 @@
     </div>
 </body>
 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
 
 <script>
@@ -418,7 +419,7 @@
         galleryImages.forEach((image, index) => {
             galleryHTML += `
                 <div class="gallery-item" style="--animation-order: ${index + 1}">
-                    <a href="${image.src}" data-lightbox="event-gallery" data-title="${image.title}">
+                    <a href="${image.src}" data-lightbox="event-gallery" data-title="${image.alt}">
                         <img class="rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] w-80 h-64 object-cover"
                              src="${image.src}"
                              alt="${image.alt}">

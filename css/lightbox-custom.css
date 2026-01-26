@@ -1,0 +1,56 @@
+/* Lightbox2 customization for Career Nexus 2024 Gallery */
+
+/* 1. Force the data container to overlay the image at the top */
+.lb-dataContainer {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  z-index: 9999 !important;
+  padding: 0 !important;
+  pointer-events: none !important; /* Let clicks pass through to image/arrows */
+}
+
+/* 2. Hide unwanted elements */
+.lb-data .lb-details,
+.lb-data .lb-caption,
+.lb-data .lb-number {
+  display: none !important;
+}
+
+/* 3. Style and position the close button */
+.lb-close {
+  display: block !important;
+  position: absolute !important;
+  top: -10px !important;
+  right: 280px !important;
+  bottom: auto !important;
+  width: 32px !important;
+  height: 32px !important;
+
+  /* Visual styling */
+  background-color: rgba(0, 0, 0, 0.6) !important;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>') !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  border-radius: 50% !important;
+  opacity: 1 !important;
+  pointer-events: auto !important; /* Re-enable clicks on the button */
+  transition: all 0.3s ease !important;
+}
+
+.lb-close:hover {
+  background-color: rgba(0, 0, 0, 0.9) !important;
+  transform: scale(1.1) !important;
+}
+
+/* 4. Ensure navigation arrows are visible */
+.lb-nav a.lb-prev,
+.lb-nav a.lb-next {
+  opacity: 1 !important;
+}
+
+.lb-nav a.lb-prev:hover,
+.lb-nav a.lb-next:hover {
+  opacity: 1 !important; /* Keep visible on hover */
+}
