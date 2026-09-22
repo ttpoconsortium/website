@@ -49,6 +49,7 @@
 				opacity: 0;
 				transform: translateY(30px);
 			}
+
 			to {
 				opacity: 1;
 				transform: translateY(0);
@@ -60,6 +61,7 @@
 				opacity: 0;
 				transform: scale(0.92);
 			}
+
 			to {
 				opacity: 1;
 				transform: scale(1);
@@ -67,8 +69,13 @@
 		}
 
 		@keyframes shimmer {
-			0% { background-position: -200% 0; }
-			100% { background-position: 200% 0; }
+			0% {
+				background-position: -200% 0;
+			}
+
+			100% {
+				background-position: 200% 0;
+			}
 		}
 
 		.animate-fade-up {
@@ -81,10 +88,21 @@
 			opacity: 0;
 		}
 
-		.stagger-1 { animation-delay: 0.1s; }
-		.stagger-2 { animation-delay: 0.2s; }
-		.stagger-3 { animation-delay: 0.3s; }
-		.stagger-4 { animation-delay: 0.4s; }
+		.stagger-1 {
+			animation-delay: 0.1s;
+		}
+
+		.stagger-2 {
+			animation-delay: 0.2s;
+		}
+
+		.stagger-3 {
+			animation-delay: 0.3s;
+		}
+
+		.stagger-4 {
+			animation-delay: 0.4s;
+		}
 
 
 		.event-card {
@@ -223,10 +241,10 @@
 						<li><a href="/membership.html"
 								class="text-gray-400 font-bold text-[14px] hover:text-white">MEMBER REGISTRATION</a>
 						</li>
-						<li><a href="/meetings.html"
-								class="text-white font-bold text-[14px] hover:text-white">MEETINGS</a></li>
-						<li><a href="/gallery.html"
-								class="text-gray-400 font-bold text-[14px] hover:text-white">GALLERY</a></li>
+						<li><a href="/events.html" class="text-white font-bold text-[14px] hover:text-white">EVENTS</a>
+						</li>
+						<li><a href="/career-nexus.html"
+								class="text-gray-400 font-bold text-[14px] hover:text-white">CAREER NEXUS</a></li>
 						<li><a href="/contact.html"
 								class="text-gray-400 font-bold text-[14px] hover:text-white">CONTACT</a></li>
 					</ul>
@@ -267,11 +285,12 @@
 					<li><a href="/membership.html"
 							class="text-gray-400 font-bold text-2xl hover:text-white transition-colors duration-300">MEMBER
 							REGISTRATION</a></li>
-					<li><a href="/meetings.html"
-							class="text-white font-bold text-2xl hover:text-white transition-colors duration-300">MEETINGS</a>
+					<li><a href="/events.html"
+							class="text-white font-bold text-2xl hover:text-white transition-colors duration-300">EVENTS</a>
 					</li>
-					<li><a href="/gallery.html"
-							class="text-gray-400 font-bold text-2xl hover:text-white transition-colors duration-300">GALLERY</a>
+					<li><a href="/events.html"
+							class="text-gray-400 font-bold text-2xl hover:text-white transition-colors duration-300">CAREER
+							NEXUS</a>
 					</li>
 					<li><a href="/contact.html"
 							class="text-gray-400 font-bold text-2xl hover:text-white transition-colors duration-300">CONTACT</a>
@@ -286,9 +305,12 @@
 				<h1 class="text-4xl md:text-5xl font-bold text-white mb-4 animate-fade-up">
 					Meetings & Events
 				</h1>
-				<div class="h-1 w-24 bg-gradient-to-r from-sky-400 to-consortium-blue-light mx-auto mb-6 rounded animate-fade-up stagger-1"></div>
-					<p class="text-gray-300 max-w-2xl mx-auto text-lg animate-fade-up stagger-2">
-					Explore our vibrant community events, meetups, and industry collaborations that bring together TPOs, academia, and industry leaders.
+				<div
+					class="h-1 w-24 bg-gradient-to-r from-sky-400 to-consortium-blue-light mx-auto mb-6 rounded animate-fade-up stagger-1">
+				</div>
+				<p class="text-gray-300 max-w-2xl mx-auto text-lg animate-fade-up stagger-2">
+					Explore our vibrant community events, meetups, and industry collaborations that bring together TPOs,
+					academia, and industry leaders.
 				</p>
 			</div>
 		</div>
@@ -301,7 +323,8 @@
 					<i class="fas fa-images text-consortium-blue-light mr-3"></i>Events & Meetups Showcase
 				</h2>
 				<p class="text-gray-400 max-w-2xl mx-auto animate-fade-up stagger-1">
-					A glimpse into our past events, industry collaborations, and community meetups that have brought together TPOs, industry leaders, and academia.
+					A glimpse into our past events, industry collaborations, and community meetups that have brought
+					together TPOs, industry leaders, and academia.
 				</p>
 			</div>
 
@@ -332,7 +355,7 @@
 			</div>
 
 			<div class="mt-10 text-center">
-				<a href="/gallery.html"
+				<a href="/events.html"
 					class="inline-flex items-center gap-2 bg-gradient-to-r from-consortium-blue-light to-sky-500 text-white font-bold py-3 px-8 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
 					<i class="fas fa-th-large"></i>
 					View Full Gallery

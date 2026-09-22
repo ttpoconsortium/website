@@ -145,10 +145,10 @@
 						<li><a href="/membership.html"
 								class="text-gray-400 font-bold text-[14px] hover:text-white">MEMBER REGISTRATION</a>
 						</li>
-						<li><a href="/meetings.html"
-								class="text-gray-400 font-bold text-[14px] hover:text-white">MEETINGS</a></li>
-						<li><a href="/gallery.html"
-								class="text-gray-400 font-bold text-[14px] hover:text-white">GALLERY</a></li>
+						<li><a href="/events.html"
+								class="text-gray-400 font-bold text-[14px] hover:text-white">EVENTS</a></li>
+						<li><a href="/career-nexus.html"
+								class="text-gray-400 font-bold text-[14px] hover:text-white">CAREER NEXUS</a></li>
 						<li><a href="/contact.html"
 								class="text-gray-400 font-bold text-[14px] hover:text-white">CONTACT</a></li>
 					</ul>
@@ -192,11 +192,12 @@
 					<li><a href="/membership.html"
 							class="text-gray-400 font-bold text-2xl hover:text-white transition-colors duration-300">MEMBER
 							REGISTRATION</a></li>
-					<li><a href="/meetings.html"
-							class="text-gray-400 font-bold text-2xl hover:text-white transition-colors duration-300">MEETINGS</a>
+					<li><a href="/events.html"
+							class="text-gray-400 font-bold text-2xl hover:text-white transition-colors duration-300">EVENTS</a>
 					</li>
-					<li><a href="/gallery.html"
-							class="text-gray-400 font-bold text-2xl hover:text-white transition-colors duration-300">GALLERY</a>
+					<li><a href="/events.html"
+							class="text-gray-400 font-bold text-2xl hover:text-white transition-colors duration-300">CAREER
+							NEXUS</a>
 					</li>
 					<li><a href="/contact.html"
 							class="text-gray-400 font-bold text-2xl hover:text-white transition-colors duration-300">CONTACT</a>
@@ -236,7 +237,7 @@
 
 			<!-- View All Events Button -->
 			<div class="mt-6 text-center">
-				<a href="/gallery.html"
+				<a href="/events.html"
 					class="gallery-button inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-6 rounded-lg shadow-md transition duration-300">
 					View All Events
 				</a>
@@ -312,6 +313,9 @@
 
 <script>
 	const upcomingEvents = [
+	];
+
+	const pastEvents = [
 		{
 			id: 1,
 			title: "Career Nexus 3.0",
@@ -320,13 +324,10 @@
 			date: "11th & 12th September, 2026",
 			time: "9:00 AM onwards",
 			image: "/assets/career-nexus-2026/career-nexus-2026-1.jpeg",
-			descriptionLink: "/events/career-nexus-2026.html"
-		}
-	];
-
-	const pastEvents = [
+			galleryLink: "/events/career-nexus-2026.html"
+		},
 		{
-			id: 1,
+			id: 2,
 			title: "Career Nexus 2025",
 			description: "A career fair bringing together top companies and college placement & training officers to explore recruitment opportunities, industry collaborations, and internship programs.",
 			venue: "Padmaja Palm Groves Resort, Hyderabad",
@@ -336,7 +337,7 @@
 			galleryLink: "/events/career-nexus-2025.html"
 		},
 		{
-			id: 2,
+			id: 3,
 			title: "LinkedIn for institutional growth",
 			description: "An interactive session focused on leveraging LinkedIn to enhance institutional branding and professional networking for placement officers.",
 			venue: "Bangalore",
@@ -346,7 +347,7 @@
 			galleryLink: "/events/linkedin.html"
 		},
 		{
-			id: 3,
+			id: 4,
 			title: "Talent Connect - TConsult",
 			description: "A strategic meet organized by TConsult to bridge the gap between industry talent requirements and academic training programs.",
 			venue: "T-Hub Hyderabad",
