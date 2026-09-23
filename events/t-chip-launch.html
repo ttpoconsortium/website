@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="../css/lightbox-custom.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="../js/navbar.js"></script>
+    <link rel="stylesheet" href="../css/navbar.css">
     <script type="application/ld+json">
             {
                 "@context": "https://schema.org",
@@ -108,35 +109,88 @@
     <!-- Content Wrapper -->
     <div class="relative z-10 w-full">
         <!-- Navbar -->
-        <div class="w-full bg-consortium-blue-dark bg-opacity-90">
-            <div class="flex flex-row justify-center items-center py-2">
-                <img class="h-20 mx-3 -mt-2"
-                    src="https://res.cloudinary.com/dbenkbws8/image/upload/v1691501311/Asset_3_1_ay28ar.png" />
-                <h1 class="font-fira-sans text-white text-center font-bold tracking-wide text-[18px] md:text-[28px]">
-                    TELANGANA TRAINING & PLACEMENT OFFICERS CONSORTIUM
-                </h1>
-            </div>
-            <ul class="hidden sm:flex gap-5 py-2 justify-center">
-                <li><a href="/index.html" class="text-gray-400 font-bold text-[14px] hover:text-white">HOME</a></li>
-                <li><a href="/aboutUs.html"
-                        class="text-gray-400 font-bold text-[14px] hover:text-consortium-blue-light">ABOUT US</a>
-                </li>
-                <li><a href="/events.html" class="text-gray-400 font-bold text-[14px] hover:text-white">EVENTS</a></li>
-                <li><a href="/committee.html" class="text-gray-400 font-bold text-[14px] hover:text-white">COMMITTEE</a>
-                </li>
-                <li><a href="/members.html" class="text-gray-400 font-bold text-[14px] hover:text-white">MEMBERS</a>
-                </li>
-                <li><a href="/membership.html" class="text-gray-400 font-bold text-[14px] hover:text-white">MEMBER
-                        REGISTRATION</a></li>
-                <li><a href="/events.html" class="text-gray-400 font-bold text-[14px] hover:text-white">EVENTS</a>
-                </li>
-                <li><a href="/career-nexus.html" class="text-white font-bold text-[14px] hover:text-white">CAREER
-                        NEXUS</a>
-                </li>
-                <li><a href="/contact.html" class="text-gray-400 font-bold text-[14px] hover:text-white">CONTACT</a>
-                </li>
-            </ul>
-        </div>
+                <header id="site-navbar" class="sticky top-0 left-0 w-full z-40 bg-consortium-blue-dark">
+    <!-- Mobile View: Logo and Title on left, Hamburger on right -->
+    <div class="flex sm:hidden flex-row justify-between items-center py-2 px-4">
+      <div class="flex items-center">
+        <img class="h-12 mr-2" alt="TTPOC Logo"
+          src="https://res.cloudinary.com/dbenkbws8/image/upload/v1691501311/Asset_3_1_ay28ar.png" />
+        <span class="text-white font-bold tracking-wide text-[14px] leading-tight">
+          TELANGANA TRAINING &amp;<br>PLACEMENT OFFICERS CONSORTIUM
+        </span>
+      </div>
+      <!-- Mobile Navigation Hamburger Button -->
+      <button id="menu-toggle" class="text-white focus:outline-none ml-2 flex-shrink-0">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Desktop View: Logo + Title row -->
+    <div class="hidden sm:block">
+      <div class="flex flex-row justify-center items-center px-8 pt-3 pb-1">
+        <img class="h-16 mx-3" alt="TTPOC Logo"
+          src="https://res.cloudinary.com/dbenkbws8/image/upload/v1691501311/Asset_3_1_ay28ar.png" />
+        <h1 class="text-white font-bold tracking-wide text-[22px] lg:text-[26px]">
+          TELANGANA TRAINING &amp; PLACEMENT OFFICERS CONSORTIUM
+        </h1>
+      </div>
+      <!-- Desktop Nav Links row -->
+      <nav class="flex justify-center pb-2">
+        <ul class="flex flex-wrap justify-center gap-4 lg:gap-6 px-4">
+          <li><a href="/index.html" class="text-gray-300 font-bold text-[13px] hover:text-consortium-blue-light transition-colors duration-200">HOME</a></li>
+          <li><a href="/aboutUs.html" class="text-gray-300 font-bold text-[13px] hover:text-consortium-blue-light transition-colors duration-200">ABOUT US</a></li>
+          <li><a href="/committee.html" class="text-gray-300 font-bold text-[13px] hover:text-consortium-blue-light transition-colors duration-200">COMMITTEE</a></li>
+          <li><a href="/members.html" class="text-gray-300 font-bold text-[13px] hover:text-consortium-blue-light transition-colors duration-200">MEMBERS</a></li>
+          <li><a href="/membership.html" class="text-gray-300 font-bold text-[13px] hover:text-consortium-blue-light transition-colors duration-200">MEMBER REGISTRATION</a></li>
+          <li><a href="/events.html" class="text-white font-bold text-[13px] hover:text-consortium-blue-light transition-colors duration-200">EVENTS</a></li>
+          <li><a href="/career-nexus.html" class="text-gray-300 font-bold text-[13px] hover:text-consortium-blue-light transition-colors duration-200">CAREER NEXUS</a></li>
+          <li><a href="/our-partners.html" class="text-gray-300 font-bold text-[13px] hover:text-consortium-blue-light transition-colors duration-200">OUR PARTNERS</a></li>
+          <li><a href="/contact.html" class="text-gray-300 font-bold text-[13px] hover:text-consortium-blue-light transition-colors duration-200">CONTACT</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+        <!-- Mobile Navigation Overlay (Hidden by default) -->
+  <div id="mobile-menu"
+    class="fixed inset-0 bg-consortium-blue-dark bg-opacity-95 z-50 transform -translate-y-full opacity-0 pointer-events-none">
+    <!-- Close Button (X Mark) -->
+    <div class="absolute top-6 right-6">
+      <button id="close-menu"
+        class="text-white p-2 focus:outline-none rounded-full hover:bg-consortium-blue-light transition-colors duration-300">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+    <!-- Navigation Links -->
+    <div class="flex flex-col h-full justify-center items-center">
+      <ul class="space-y-6 text-center">
+        <li><a href="/index.html"
+            class="text-gray-400 font-bold text-2xl hover:text-white transition-colors duration-300">HOME</a></li>
+        <li><a href="/aboutUs.html"
+            class="text-gray-400 font-bold text-2xl hover:text-white transition-colors duration-300">ABOUT US</a></li>
+        <li><a href="/committee.html"
+            class="text-gray-400 font-bold text-2xl hover:text-white transition-colors duration-300">COMMITTEE</a></li>
+        <li><a href="/members.html"
+            class="text-gray-400 font-bold text-2xl hover:text-white transition-colors duration-300">MEMBERS</a></li>
+        <li><a href="/membership.html"
+            class="text-gray-400 font-bold text-2xl hover:text-white transition-colors duration-300">MEMBER
+            REGISTRATION</a></li>
+        <li><a href="/events.html"
+            class="text-white font-bold text-2xl hover:text-white transition-colors duration-300">EVENTS</a></li>
+        <li><a href="/career-nexus.html"
+            class="text-gray-400 font-bold text-2xl hover:text-white transition-colors duration-300">CAREER NEXUS</a></li>
+        <li><a href="/our-partners.html"
+            class="text-gray-400 font-bold text-2xl hover:text-white transition-colors duration-300">OUR PARTNERS</a></li>
+        <li><a href="/contact.html"
+            class="text-gray-400 font-bold text-2xl hover:text-white transition-colors duration-300">CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
 
         <!-- Event container -->
         <div class="text-white">

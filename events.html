@@ -99,112 +99,89 @@
 	<!-- Content Wrapper -->
 	<div class="relative z-10 w-full">
 		<!-- Navbar -->
-		<div class="w-full bg-consortium-blue-dark bg-opacity-90">
-			<!-- Mobile View: Logo and Title on left, Hamburger on right -->
-			<div class="flex sm:hidden flex-row justify-between items-center py-2 px-4">
-				<div class="flex items-center">
-					<img class="h-16 mr-2 -mt-2"
-						src="https://res.cloudinary.com/dbenkbws8/image/upload/v1691501311/Asset_3_1_ay28ar.png" />
-					<h1 class="font-fira-sans text-white text-center font-bold tracking-wide text-[16px]">
-						TELANGANA TRAINING & PLACEMENT OFFICERS CONSORTIUM
-					</h1>
-				</div>
+				<header id="site-navbar" class="sticky top-0 left-0 w-full z-40 bg-consortium-blue-dark">
+    <!-- Mobile View: Logo and Title on left, Hamburger on right -->
+    <div class="flex sm:hidden flex-row justify-between items-center py-2 px-4">
+      <div class="flex items-center">
+        <img class="h-12 mr-2" alt="TTPOC Logo"
+          src="https://res.cloudinary.com/dbenkbws8/image/upload/v1691501311/Asset_3_1_ay28ar.png" />
+        <span class="text-white font-bold tracking-wide text-[14px] leading-tight">
+          TELANGANA TRAINING &amp;<br>PLACEMENT OFFICERS CONSORTIUM
+        </span>
+      </div>
+      <!-- Mobile Navigation Hamburger Button -->
+      <button id="menu-toggle" class="text-white focus:outline-none ml-2 flex-shrink-0">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
 
-				<!-- Mobile Navigation Hamburger Button -->
-				<div>
-					<button id="menu-toggle" class="text-white focus:outline-none">
-						<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-							xmlns="http://www.w3.org/2000/svg">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-								d="M4 6h16M4 12h16M4 18h16"></path>
-						</svg>
-					</button>
-				</div>
-			</div>
-
-			<!-- Desktop View: Centered Logo and Title -->
-			<div class="hidden sm:flex flex-row justify-center items-center px-8 py-3">
-				<img class="h-28 mx-3 -mt-2"
-					src="https://res.cloudinary.com/dbenkbws8/image/upload/v1691501311/Asset_3_1_ay28ar.png" />
-
-				<div class="flex flex-col items-start">
-					<h1 class="font-fira-sans text-white font-bold tracking-wide text-[28px]">
-						TELANGANA TRAINING & PLACEMENT OFFICERS CONSORTIUM
-					</h1>
-					<ul class="flex gap-5 mt-2">
-						<li><a href="/index.html" class="text-gray-400 font-bold text-[14px] hover:text-white">HOME</a>
-						</li>
-						<li><a href="/aboutUs.html" class="text-gray-400 font-bold text-[14px] hover:text-white">ABOUT
-								US</a></li>
-						<li><a href="/events.html" class="text-white font-bold text-[14px] hover:text-white">EVENTS</a>
-						</li>
-						<li><a href="/committee.html"
-								class="text-gray-400 font-bold text-[14px] hover:text-white">COMMITTEE</a></li>
-						<li><a href="/members.html"
-								class="text-gray-400 font-bold text-[14px] hover:text-white">MEMBERS</a></li>
-						<li><a href="/membership.html"
-								class="text-gray-400 font-bold text-[14px] hover:text-white">MEMBER REGISTRATION</a>
-						</li>
-						<li><a href="/events.html"
-								class="text-gray-400 font-bold text-[14px] hover:text-white">EVENTS</a></li>
-						<li><a href="/career-nexus.html"
-								class="text-gray-400 font-bold text-[14px] hover:text-white">CAREER NEXUS</a></li>
-						<li><a href="/contact.html"
-								class="text-gray-400 font-bold text-[14px] hover:text-white">CONTACT</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
+    <!-- Desktop View: Logo + Title row -->
+    <div class="hidden sm:block">
+      <div class="flex flex-row justify-center items-center px-8 pt-3 pb-1">
+        <img class="h-16 mx-3" alt="TTPOC Logo"
+          src="https://res.cloudinary.com/dbenkbws8/image/upload/v1691501311/Asset_3_1_ay28ar.png" />
+        <h1 class="text-white font-bold tracking-wide text-[22px] lg:text-[26px]">
+          TELANGANA TRAINING &amp; PLACEMENT OFFICERS CONSORTIUM
+        </h1>
+      </div>
+      <!-- Desktop Nav Links row -->
+      <nav class="flex justify-center pb-2">
+        <ul class="flex flex-wrap justify-center gap-4 lg:gap-6 px-4">
+          <li><a href="/index.html" class="text-gray-300 font-bold text-[13px] hover:text-consortium-blue-light transition-colors duration-200">HOME</a></li>
+          <li><a href="/aboutUs.html" class="text-gray-300 font-bold text-[13px] hover:text-consortium-blue-light transition-colors duration-200">ABOUT US</a></li>
+          <li><a href="/committee.html" class="text-gray-300 font-bold text-[13px] hover:text-consortium-blue-light transition-colors duration-200">COMMITTEE</a></li>
+          <li><a href="/members.html" class="text-gray-300 font-bold text-[13px] hover:text-consortium-blue-light transition-colors duration-200">MEMBERS</a></li>
+          <li><a href="/membership.html" class="text-gray-300 font-bold text-[13px] hover:text-consortium-blue-light transition-colors duration-200">MEMBER REGISTRATION</a></li>
+          <li><a href="/events.html" class="text-white font-bold text-[13px] hover:text-consortium-blue-light transition-colors duration-200">EVENTS</a></li>
+          <li><a href="/career-nexus.html" class="text-gray-300 font-bold text-[13px] hover:text-consortium-blue-light transition-colors duration-200">CAREER NEXUS</a></li>
+          <li><a href="/our-partners.html" class="text-gray-300 font-bold text-[13px] hover:text-consortium-blue-light transition-colors duration-200">OUR PARTNERS</a></li>
+          <li><a href="/contact.html" class="text-gray-300 font-bold text-[13px] hover:text-consortium-blue-light transition-colors duration-200">CONTACT</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
 		<!-- Mobile Navigation Overlay (Hidden by default) -->
-		<div id="mobile-menu"
-			class="fixed inset-0 bg-consortium-blue-dark bg-opacity-95 z-50 transform -translate-y-full opacity-0 pointer-events-none">
-			<!-- Close Button (X Mark) -->
-			<div class="absolute top-6 right-6">
-				<button id="close-menu"
-					class="text-white p-2 focus:outline-none rounded-full hover:bg-consortium-blue-light transition-colors duration-300">
-					<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-						xmlns="http://www.w3.org/2000/svg">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
-							d="M6 18L18 6M6 6l12 12"></path>
-					</svg>
-				</button>
-			</div>
-
-			<!-- Navigation Links -->
-			<div class="flex flex-col h-full justify-center items-center">
-				<ul class="space-y-6 text-center">
-					<li><a href="/index.html"
-							class="text-gray-400 font-bold text-2xl hover:text-white transition-colors duration-300">HOME</a>
-					</li>
-					<li><a href="/aboutUs.html"
-							class="text-gray-400 font-bold text-2xl hover:text-white transition-colors duration-300">ABOUT
-							US</a></li>
-					<li><a href="/events.html"
-							class="text-white font-bold text-2xl hover:text-white transition-colors duration-300">EVENTS</a>
-					</li>
-					<li><a href="/committee.html"
-							class="text-gray-400 font-bold text-2xl hover:text-white transition-colors duration-300">COMMITTEE</a>
-					</li>
-					<li><a href="/members.html"
-							class="text-gray-400 font-bold text-2xl hover:text-white transition-colors duration-300">MEMBERS</a>
-					</li>
-					<li><a href="/membership.html"
-							class="text-gray-400 font-bold text-2xl hover:text-white transition-colors duration-300">MEMBER
-							REGISTRATION</a></li>
-					<li><a href="/events.html"
-							class="text-gray-400 font-bold text-2xl hover:text-white transition-colors duration-300">EVENTS</a>
-					</li>
-					<li><a href="/events.html"
-							class="text-gray-400 font-bold text-2xl hover:text-white transition-colors duration-300">CAREER
-							NEXUS</a>
-					</li>
-					<li><a href="/contact.html"
-							class="text-gray-400 font-bold text-2xl hover:text-white transition-colors duration-300">CONTACT</a>
-					</li>
-				</ul>
-			</div>
-		</div>
+				<!-- Mobile Navigation Overlay (Hidden by default) -->
+  <div id="mobile-menu"
+    class="fixed inset-0 bg-consortium-blue-dark bg-opacity-95 z-50 transform -translate-y-full opacity-0 pointer-events-none">
+    <!-- Close Button (X Mark) -->
+    <div class="absolute top-6 right-6">
+      <button id="close-menu"
+        class="text-white p-2 focus:outline-none rounded-full hover:bg-consortium-blue-light transition-colors duration-300">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+    <!-- Navigation Links -->
+    <div class="flex flex-col h-full justify-center items-center">
+      <ul class="space-y-6 text-center">
+        <li><a href="/index.html"
+            class="text-gray-400 font-bold text-2xl hover:text-white transition-colors duration-300">HOME</a></li>
+        <li><a href="/aboutUs.html"
+            class="text-gray-400 font-bold text-2xl hover:text-white transition-colors duration-300">ABOUT US</a></li>
+        <li><a href="/committee.html"
+            class="text-gray-400 font-bold text-2xl hover:text-white transition-colors duration-300">COMMITTEE</a></li>
+        <li><a href="/members.html"
+            class="text-gray-400 font-bold text-2xl hover:text-white transition-colors duration-300">MEMBERS</a></li>
+        <li><a href="/membership.html"
+            class="text-gray-400 font-bold text-2xl hover:text-white transition-colors duration-300">MEMBER
+            REGISTRATION</a></li>
+        <li><a href="/events.html"
+            class="text-white font-bold text-2xl hover:text-white transition-colors duration-300">EVENTS</a></li>
+        <li><a href="/career-nexus.html"
+            class="text-gray-400 font-bold text-2xl hover:text-white transition-colors duration-300">CAREER NEXUS</a></li>
+        <li><a href="/our-partners.html"
+            class="text-gray-400 font-bold text-2xl hover:text-white transition-colors duration-300">OUR PARTNERS</a></li>
+        <li><a href="/contact.html"
+            class="text-gray-400 font-bold text-2xl hover:text-white transition-colors duration-300">CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
 	</div>
 
 	<!-- Events Section -->
@@ -237,10 +214,10 @@
 
 			<!-- View All Events Button -->
 			<div class="mt-6 text-center">
-				<a href="/events.html"
+				<button id="toggleEventsBtn"
 					class="gallery-button inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-6 rounded-lg shadow-md transition duration-300">
 					View All Events
-				</a>
+				</button>
 			</div>
 		</div>
 
@@ -328,6 +305,68 @@
 		},
 		{
 			id: 2,
+			title: "HR & TPO Wellness Retreat",
+			description: "A wellness retreat connecting HR leaders and placement officers.",
+			venue: "Hyderabad",
+			date: "13th December, 2025",
+			image: "https://cdn.jsdelivr.net/gh/ttpoc-web/website@main/assets/wellness-retreat-1.jpg",
+			galleryLink: "/events/hr-tpo-retreat.html"
+		},
+		{
+			id: 3,
+			title: "Pathway to Taiwan: Career and Study Expo",
+			description: "An expo on career and study opportunities in Taiwan.",
+			venue: "T-Works, Hyderabad",
+			date: "10th December, 2025",
+			image: "https://cdn.jsdelivr.net/gh/ttpoc-web/website@main/assets/Taiwan-meet-dec-2.jpeg",
+			galleryLink: "/events/taiwan-expo.html"
+		},
+		{
+			id: 4,
+			title: "TPO & Faculty Meet - CDAC",
+			description: "A faculty and TPO meet hosted with C-DAC.",
+			venue: "C-DAC, Hyderabad",
+			date: "2nd December, 2025",
+			image: "https://cdn.jsdelivr.net/gh/ttpoc-web/website@main/assets/cdac1.JPG",
+			galleryLink: "/events/cdac-faculty-meet.html"
+		},
+		{
+			id: 5,
+			title: "FyrstGen Innovation Summit 2025",
+			description: "An innovation summit uniting students, startups and industry.",
+			venue: "T-Hub, Hyderabad",
+			date: "11th November, 2025",
+			image: "https://cdn.jsdelivr.net/gh/ttpoc-web/website@main/assets/firstgen-innovation-summit-2025-1.jpeg",
+			galleryLink: "/events/fyrstgen-innovation-summit.html"
+		},
+		{
+			id: 6,
+			title: "Cognizant-TPO Meet",
+			description: "An industry-academia meet hosted at Cognizant.",
+			venue: "Cognizant GAR Campus, Hyderabad",
+			date: "6th October, 2025",
+			image: "https://cdn.jsdelivr.net/gh/ttpoc-web/website@main/assets/cog_event1.jpeg",
+			galleryLink: "/events/cognizant-tpo-meet.html"
+		},
+		{
+			id: 7,
+			title: "Grand Launch of T-CHIP",
+			description: "The grand launch of the T-CHIP initiative.",
+			venue: "Hotel Trident, Hyderabad",
+			date: "27th September, 2025",
+			image: "https://cdn.jsdelivr.net/gh/ttpoc-web/website@main/assets/t-chip1.jpg",
+			galleryLink: "/events/t-chip-launch.html"
+		},
+		{
+			id: 8,
+			title: "TPO Meet at ESCI",
+			description: "A placement officers' meet hosted at ESCI.",
+			venue: "ESCI, Hyderabad",
+			date: "22nd August, 2025",
+			image: "https://cdn.jsdelivr.net/gh/ttpoc-web/website@main/assets/TPO-meet-at-ESCI-22nd-August-2025.jpeg"
+		},
+		{
+			id: 9,
 			title: "Career Nexus 2025",
 			description: "A career fair bringing together top companies and college placement & training officers to explore recruitment opportunities, industry collaborations, and internship programs.",
 			venue: "Padmaja Palm Groves Resort, Hyderabad",
@@ -337,7 +376,15 @@
 			galleryLink: "/events/career-nexus-2025.html"
 		},
 		{
-			id: 3,
+			id: 10,
+			title: "Suman TV Builder Award Summit",
+			description: "Celebrating builders and achievers with industry presence.",
+			venue: "Hyderabad",
+			date: "2025",
+			image: "https://cdn.jsdelivr.net/gh/ttpoc-web/website@main/assets/Suman-TV-builder- award-summit.jpeg"
+		},
+		{
+			id: 11,
 			title: "LinkedIn for institutional growth",
 			description: "An interactive session focused on leveraging LinkedIn to enhance institutional branding and professional networking for placement officers.",
 			venue: "Bangalore",
@@ -347,7 +394,7 @@
 			galleryLink: "/events/linkedin.html"
 		},
 		{
-			id: 4,
+			id: 12,
 			title: "Talent Connect - TConsult",
 			description: "A strategic meet organized by TConsult to bridge the gap between industry talent requirements and academic training programs.",
 			venue: "T-Hub Hyderabad",
@@ -355,6 +402,51 @@
 			time: "6:00 PM - 9:00 PM",
 			image: "https://cdn.jsdelivr.net/gh/ttpoc-web/website@main/assets/tconsult-1.jpg",
 			galleryLink: "/events/talent-connect.html"
+		},
+		{
+			id: 13,
+			title: "SAP Digital Conclave",
+			description: "An industry conclave on digital transformation with SAP.",
+			venue: "Hyderabad",
+			date: "October 2024",
+			image: "https://res.cloudinary.com/dtkvrpdtp/image/upload/v1741485951/IMG-20250304-WA0009_owtefc.jpg",
+			galleryLink: "/events/sap-digital-conclave.html"
+		},
+		{
+			id: 14,
+			title: "Nasscom ER&D",
+			description: "An industry session on engineering R&D trends with Nasscom.",
+			venue: "Hyderabad",
+			date: "July 2024",
+			image: "https://cdn.jsdelivr.net/gh/ttpoc-web/website@main/assets/nasscom-1.jpg",
+			galleryLink: "/events/nasscom-2024.html"
+		},
+		{
+			id: 15,
+			title: "TOEFL Meet",
+			description: "An ambassadors' meet on TOEFL programs and study-abroad pathways.",
+			venue: "Hyderabad",
+			date: "July 2024",
+			image: "https://cdn.jsdelivr.net/gh/ttpoc-web/website@main/assets/toefl1.jpg",
+			galleryLink: "/events/toefl-meet.html"
+		},
+		{
+			id: 16,
+			title: "Career Nexus 2024",
+			description: "A forum bringing together TPOs, technology leaders, EdTech professionals, and HR leaders for meaningful collaboration.",
+			venue: "Hyderabad",
+			date: "April 2024",
+			image: "https://cdn.jsdelivr.net/gh/ttpoc-web/website@main/assets/career-nexus-2024-1.jpg",
+			galleryLink: "/events/career-nexus-2024.html"
+		},
+		{
+			id: 17,
+			title: "TTPOC Launch Event",
+			description: "The official launch of the Telangana TPO Consortium.",
+			venue: "Hyderabad",
+			date: "August 2023",
+			image: "https://cdn.jsdelivr.net/gh/ttpoc-web/website@main/assets/launch_event.jpg",
+			galleryLink: "/events/ttpoc-launch.html"
 		}
 	];
 
@@ -412,10 +504,27 @@
 		});
 
 	}
-	// Render Past Events
+	// Render Past Events (initially a preview; "View All Events" reveals the rest)
 	const pastEventsContainer = document.getElementById('pastEventsContainer');
-	pastEvents.forEach(event => {
-		const eventHTML = `
+	const toggleEventsBtn = document.getElementById('toggleEventsBtn');
+	const PAST_EVENTS_PREVIEW_COUNT = 6;
+	let showingAllPastEvents = false;
+
+	function pastEventCard(event) {
+		const timeRow = event.time ? `
+          <div class="flex items-center">
+            <svg class="w-4 h-4 text-indigo-300 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+            </svg>
+            <span class="text-gray-300">${event.time}</span>
+          </div>` : '';
+		const galleryBtn = event.galleryLink ? `
+        <div class="mt-4 text-center">
+          <a href="${event.galleryLink}" class="gallery-button">
+            View Gallery
+          </a>
+        </div>` : '';
+		return `
     <div class="bg-white w-full md:w-[30%] bg-opacity-10 backdrop-filter backdrop-blur-sm rounded-lg overflow-hidden shadow-md hover:shadow-xl border border-opacity-20 border-white transition duration-300 transform hover:-translate-y-1">
       <div class="h-40 overflow-hidden">
         <img src="${event.image}" alt="${event.title}" class="w-full h-full object-cover transition duration-500 hover:scale-105">
@@ -423,7 +532,7 @@
       <div class="p-4">
         <h4 class="text-white font-bold text-lg mb-2">${event.title}</h4>
         <p class="text-gray-300 text-sm mb-3">${event.description}</p>
-        
+
         <div class="space-y-2 text-sm">
           <div class="flex items-center">
             <svg class="w-4 h-4 text-blue-300 mr-2" fill="currentColor" viewBox="0 0 20 20">
@@ -431,39 +540,45 @@
             </svg>
             <span class="text-gray-300">${event.venue}</span>
           </div>
-          
+
           <div class="flex items-center">
             <svg class="w-4 h-4 text-purple-300 mr-2" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path>
+              <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 002-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path>
             </svg>
             <span class="text-gray-300">${event.date}</span>
           </div>
-          
-          <div class="flex items-center">
-            <svg class="w-4 h-4 text-indigo-300 mr-2" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
-            </svg>
-            <span class="text-gray-300">${event.time}</span>
-          </div>
+          ${timeRow}
         </div>
-        
-        <div class="mt-4 text-center">
-          <a href="${event.galleryLink}" class="gallery-button">
-            View Gallery
-          </a>
-        </div>
+        ${galleryBtn}
       </div>
     </div>
     `;
-		pastEventsContainer.innerHTML += eventHTML;
-	});
-	// JavaScript code to toggle mobile menu
-	document
-		.getElementById("mobileMenuButton")
-		.addEventListener("click", function () {
-			const mobileMenu = document.getElementById("mobileMenu");
-			mobileMenu.classList.toggle("hidden");
+	}
+
+	function renderPastEvents() {
+		const visible = showingAllPastEvents ? pastEvents : pastEvents.slice(0, PAST_EVENTS_PREVIEW_COUNT);
+		pastEventsContainer.innerHTML = visible.map(pastEventCard).join('');
+		if (toggleEventsBtn) {
+			toggleEventsBtn.textContent = showingAllPastEvents ? 'Show Less' : 'View All Events';
+			toggleEventsBtn.style.display = pastEvents.length > PAST_EVENTS_PREVIEW_COUNT ? '' : 'none';
+		}
+	}
+	renderPastEvents();
+	if (toggleEventsBtn) {
+		toggleEventsBtn.addEventListener('click', function () {
+			showingAllPastEvents = !showingAllPastEvents;
+			renderPastEvents();
 		});
+	}
+	// JavaScript code to toggle mobile menu
+	const mobileMenuButton = document.getElementById("mobileMenuButton");
+	if (mobileMenuButton) {
+		mobileMenuButton
+			.addEventListener("click", function () {
+				const mobileMenu = document.getElementById("mobileMenu");
+				if (mobileMenu) mobileMenu.classList.toggle("hidden");
+			});
+	}
 
 </script>
 

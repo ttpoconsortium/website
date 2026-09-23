@@ -4,11 +4,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Career Nexus Events - Telangana TPO Consortium</title>
-  <meta name="description" content="Explore all Career Nexus events organized by the Telangana TPO Consortium.">
+  <title>Our Partners - Telangana TPO Consortium</title>
+  <meta name="description" content="Meet the powered-by partners and proud sponsors supporting the Telangana TPO Consortium.">
   <link rel="stylesheet" href="./css/navbar.css">
   <script src="./js/navbar.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
   <script>
     tailwind.config = {
       theme: {
@@ -26,18 +27,19 @@
       background-size: cover;
     }
 
-    .event-card {
-      background: rgba(255, 255, 255, 0.08);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.16);
-      transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+    .partner-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .event-card:hover {
-      background: rgba(255, 255, 255, 0.14);
-      transform: translateY(-6px);
-      box-shadow: 0 18px 35px rgba(0, 0, 0, 0.3);
+    .partner-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.35);
+    }
+
+    .partner-card img {
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: contain;
     }
 
     .section-title::after {
@@ -89,8 +91,8 @@
           <li><a href="/members.html" class="text-gray-300 font-bold text-[13px] hover:text-consortium-blue-light transition-colors duration-200">MEMBERS</a></li>
           <li><a href="/membership.html" class="text-gray-300 font-bold text-[13px] hover:text-consortium-blue-light transition-colors duration-200">MEMBER REGISTRATION</a></li>
           <li><a href="/events.html" class="text-gray-300 font-bold text-[13px] hover:text-consortium-blue-light transition-colors duration-200">EVENTS</a></li>
-          <li><a href="/career-nexus.html" class="text-white font-bold text-[13px] hover:text-consortium-blue-light transition-colors duration-200">CAREER NEXUS</a></li>
-          <li><a href="/our-partners.html" class="text-gray-300 font-bold text-[13px] hover:text-consortium-blue-light transition-colors duration-200">OUR PARTNERS</a></li>
+          <li><a href="/career-nexus.html" class="text-gray-300 font-bold text-[13px] hover:text-consortium-blue-light transition-colors duration-200">CAREER NEXUS</a></li>
+          <li><a href="/our-partners.html" class="text-white font-bold text-[13px] hover:text-consortium-blue-light transition-colors duration-200">OUR PARTNERS</a></li>
           <li><a href="/contact.html" class="text-gray-300 font-bold text-[13px] hover:text-consortium-blue-light transition-colors duration-200">CONTACT</a></li>
         </ul>
       </nav>
@@ -125,79 +127,98 @@
         <li><a href="/events.html"
             class="text-gray-400 font-bold text-2xl hover:text-white transition-colors duration-300">EVENTS</a></li>
         <li><a href="/career-nexus.html"
-            class="text-white font-bold text-2xl hover:text-white transition-colors duration-300">CAREER NEXUS</a></li>
+            class="text-gray-400 font-bold text-2xl hover:text-white transition-colors duration-300">CAREER NEXUS</a></li>
         <li><a href="/our-partners.html"
-            class="text-gray-400 font-bold text-2xl hover:text-white transition-colors duration-300">OUR PARTNERS</a></li>
+            class="text-white font-bold text-2xl hover:text-white transition-colors duration-300">OUR PARTNERS</a></li>
         <li><a href="/contact.html"
             class="text-gray-400 font-bold text-2xl hover:text-white transition-colors duration-300">CONTACT</a></li>
       </ul>
     </div>
   </div>
+
   <main class="relative z-10 max-w-7xl mx-auto px-4 md:px-8 py-10">
-    <section>
-      <h2 class="section-title text-white uppercase font-bold text-2xl md:text-3xl text-center">Past Career Nexus Events
-      </h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto mt-8">
-        <article class="event-card rounded-lg overflow-hidden">
-          <div class="h-56 overflow-hidden">
-            <img src="/assets/career-nexus-2026/career-nexus-2026-1.jpeg" alt="Career Nexus 3.0"
-              class="w-full h-full object-cover">
-          </div>
-          <div class="p-5">
-            <h2 class="text-white font-bold text-xl">Career Nexus 3.0</h2>
-            <p class="text-gray-300 text-sm mt-2">Catalyzing Careers Through Global Capability Centers.</p>
-            <div class="text-gray-300 text-sm space-y-2 mt-4">
-              <p><i class="fas fa-location-dot text-cyan-300 w-5"></i> Hyderabad</p>
-              <p><i class="fas fa-calendar text-cyan-300 w-5"></i> 11th &amp; 12th September, 2026</p>
-              <p><i class="fas fa-clock text-cyan-300 w-5"></i> 9:00 AM onwards</p>
-            </div>
-            <a href="/events/career-nexus-2026.html"
-              class="inline-block mt-5 bg-cyan-600 hover:bg-cyan-500 text-white font-bold text-sm px-4 py-2 rounded transition">View
-              Gallery</a>
-          </div>
-        </article>
+    <section class="text-center">
+      <h2 class="section-title text-white uppercase font-bold text-2xl md:text-3xl">Our Partners</h2>
+      <p class="text-gray-300 mt-4 max-w-2xl mx-auto">Powered by visionaries, supported by industry leaders.</p>
+    </section>
 
-        <article class="event-card rounded-lg overflow-hidden">
-          <div class="h-56 overflow-hidden">
-            <img src="https://cdn.jsdelivr.net/gh/ttpoc-web/website@main/assets/career-nexus-2025-1.jpg"
-              alt="Career Nexus 2025" class="w-full h-full object-cover">
-          </div>
-          <div class="p-5">
-            <h2 class="text-white font-bold text-xl">Career Nexus 2025</h2>
-            <p class="text-gray-300 text-sm mt-2">A career fair connecting companies, placement officers, and students
-              through recruitment and internship opportunities.</p>
-            <div class="text-gray-300 text-sm space-y-2 mt-4">
-              <p><i class="fas fa-location-dot text-cyan-300 w-5"></i> Padmaja Palm Groves Resort, Hyderabad</p>
-              <p><i class="fas fa-calendar text-cyan-300 w-5"></i> June 6-7, 2025</p>
-            </div>
-            <a href="/events/career-nexus-2025.html"
-              class="inline-block mt-5 bg-cyan-600 hover:bg-cyan-500 text-white font-bold text-sm px-4 py-2 rounded transition">View
-              Gallery</a>
-          </div>
-        </article>
+    <section class="mt-12">
+      <h3 class="text-white uppercase font-bold text-xl mb-6 text-center">
+        <span class="relative inline-block">
+          Powered By
+          <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-consortium-blue-light"></span>
+        </span>
+      </h3>
+      <div class="flex flex-wrap justify-center gap-6">
+        <div class="partner-card bg-white rounded-xl p-5 w-full sm:w-[45%] lg:w-[30%] h-36 flex items-center justify-center">
+          <img src="/assets/partners/powered-lpu.png" alt="LPU - Lovely Professional University" loading="lazy">
+        </div>
+        <div class="partner-card bg-white rounded-xl p-5 w-full sm:w-[45%] lg:w-[30%] h-36 flex items-center justify-center">
+          <img src="/assets/partners/powered-student-tribe.webp" alt="Student Tribe" loading="lazy">
+        </div>
+      </div>
+    </section>
 
-        <article class="event-card rounded-lg overflow-hidden">
-          <div class="h-56 overflow-hidden">
-            <img src="/assets/career-nexus-2024/DSC06839.jpg" alt="Career Nexus 2024"
-              class="w-full h-full object-cover">
-          </div>
-          <div class="p-5">
-            <h2 class="text-white font-bold text-xl">Career Nexus 2024</h2>
-            <p class="text-gray-300 text-sm mt-2">A forum bringing together TPOs, technology leaders, EdTech
-              professionals, and HR leaders for meaningful collaboration.</p>
-            <div class="text-gray-300 text-sm space-y-2 mt-4">
-              <p><i class="fas fa-location-dot text-cyan-300 w-5"></i> Telangana</p>
-              <p><i class="fas fa-calendar text-cyan-300 w-5"></i> 2024</p>
-            </div>
-            <a href="/events/career-nexus-2024.html"
-              class="inline-block mt-5 bg-cyan-600 hover:bg-cyan-500 text-white font-bold text-sm px-4 py-2 rounded transition">View
-              Gallery</a>
-          </div>
-        </article>
+    <section class="mt-14">
+      <h3 class="text-white uppercase font-bold text-xl mb-6 text-center">
+        <span class="relative inline-block">
+          Proud Sponsors
+          <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-consortium-blue-light"></span>
+        </span>
+      </h3>
+      <div class="flex flex-wrap justify-center gap-6">
+        <div class="partner-card bg-white rounded-xl p-5 w-full sm:w-[45%] lg:w-[30%] h-32 flex items-center justify-center">
+          <img src="/assets/partners/sponsor-smart-interviews.jpg" alt="Smart Interviews" loading="lazy">
+        </div>
+        <div class="partner-card bg-white rounded-xl p-5 w-full sm:w-[45%] lg:w-[30%] h-32 flex items-center justify-center">
+          <img src="/assets/partners/sponsor-tekworks.png" alt="Tekworks" loading="lazy">
+        </div>
+        <div class="partner-card bg-white rounded-xl p-5 w-full sm:w-[45%] lg:w-[30%] h-32 flex items-center justify-center">
+          <img src="/assets/partners/sponsor-onrol.png" alt="Onrol AI Execution School" loading="lazy">
+        </div>
+        <div class="partner-card bg-white rounded-xl p-5 w-full sm:w-[45%] lg:w-[30%] h-32 flex items-center justify-center">
+          <img src="/assets/partners/sponsor-blue-cloud-softech.png" alt="Blue Cloud Softech" loading="lazy">
+        </div>
+        <div class="partner-card bg-white rounded-xl p-5 w-full sm:w-[45%] lg:w-[30%] h-32 flex items-center justify-center">
+          <img src="/assets/partners/sponsor-expert-hire.png" alt="Expert Hire" loading="lazy">
+        </div>
+        <div class="partner-card bg-white rounded-xl p-5 w-full sm:w-[45%] lg:w-[30%] h-32 flex items-center justify-center">
+          <img src="/assets/partners/sponsor-quantum-academics.png" alt="Quantum Academics" loading="lazy">
+        </div>
+        <div class="partner-card bg-white rounded-xl p-5 w-full sm:w-[45%] lg:w-[30%] h-32 flex items-center justify-center">
+          <img src="/assets/partners/sponsor-talent-shine.png" alt="Talent Shine" loading="lazy">
+        </div>
+        <div class="partner-card bg-white rounded-xl p-5 w-full sm:w-[45%] lg:w-[30%] h-32 flex items-center justify-center">
+          <img src="/assets/partners/sponsor-smart-bridge.png" alt="Smart Bridge" loading="lazy">
+        </div>
+        <div class="partner-card bg-white rounded-xl p-5 w-full sm:w-[45%] lg:w-[30%] h-32 flex items-center justify-center">
+          <img src="/assets/partners/sponsor-gradstreet.png" alt="Gradstreet" loading="lazy">
+        </div>
+        <div class="partner-card bg-white rounded-xl p-5 w-full sm:w-[45%] lg:w-[30%] h-32 flex items-center justify-center">
+          <img src="/assets/partners/sponsor-datateach.png" alt="DataTeach.ai" loading="lazy">
+        </div>
+        <div class="partner-card bg-white rounded-xl p-5 w-full sm:w-[45%] lg:w-[30%] h-32 flex items-center justify-center">
+          <img src="/assets/partners/sponsor-brain-o-vision.png" alt="Brain O Vision" loading="lazy">
+        </div>
+        <div class="partner-card bg-gray-900 rounded-xl p-5 w-full sm:w-[45%] lg:w-[30%] h-32 flex items-center justify-center">
+          <img src="/assets/partners/sponsor-maven-silicon.svg" alt="Maven Silicon" loading="lazy">
+        </div>
+        <div class="partner-card bg-gray-900 rounded-xl p-5 w-full sm:w-[45%] lg:w-[30%] h-32 flex items-center justify-center">
+          <img src="/assets/partners/sponsor-imfs-hyderabad.webp" alt="IMFS Hyderabad" loading="lazy">
+        </div>
+        <div class="partner-card bg-white rounded-xl p-5 w-full sm:w-[45%] lg:w-[30%] h-32 flex items-center justify-center">
+          <img src="/assets/partners/sponsor-hattiops.svg" alt="Hattiops" loading="lazy">
+        </div>
+        <div class="partner-card bg-white rounded-xl p-5 w-full sm:w-[45%] lg:w-[30%] h-32 flex items-center justify-center">
+          <img src="/assets/partners/sponsor-wonderla.webp" alt="Wonderla" loading="lazy">
+        </div>
+        <div class="partner-card bg-gray-900 rounded-xl p-5 w-full sm:w-[45%] lg:w-[30%] h-32 flex items-center justify-center">
+          <img src="/assets/partners/sponsor-vayam-designers.png" alt="Vayam Designers" loading="lazy">
+        </div>
       </div>
     </section>
   </main>
-  <!-- Footer (reuse from other pages) -->
+
   <footer class="bg-gray-800 py-12 pb-2">
     <div class="container mx-auto max-w-6xl px-4">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">

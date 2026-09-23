@@ -1,28 +1,64 @@
 document.addEventListener('DOMContentLoaded', function () {
+  // Canonical links that must appear (in order) right after MEMBER REGISTRATION.
+  var NAV = [
+    { href: '/events.html', label: 'EVENTS' },
+    { href: '/career-nexus.html', label: 'CAREER NEXUS' },
+    { href: '/our-partners.html', label: 'OUR PARTNERS' }
+  ];
+
+  function norm(s) {
+    return s.replace(/\s+/g, ' ').trim();
+  }
+
   document.querySelectorAll('ul').forEach(function (menu) {
     if (menu.closest('footer')) return;
-    const registrationLink = menu.querySelector('a[href*="membership.html"]');
+    var registrationLink = menu.querySelector('a[href*="membership.html"]');
     if (!registrationLink) return;
 
-    const registrationItem = registrationLink.closest('li');
-    const removeDuplicate = function (link) {
-      const item = link.closest('li');
-      if (item) item.remove();
-    };
+    var registrationItem = registrationLink.closest('li');
+    if (!registrationItem) return;
 
-    menu.querySelectorAll('a[href*="meetings.html"], a[href*="gallery.html"], a[href*="events.html"], a[href*="career-nexus.html"]')
-      .forEach(removeDuplicate);
+    // Drop legacy links from old navbars.
+    menu.querySelectorAll('a[href*="meetings.html"], a[href*="gallery.html"]')
+      .forEach(function (link) {
+        var item = link.closest('li');
+        if (item) item.remove();
+      });
 
-    const createNavItem = function (href, label) {
-      const item = registrationItem.cloneNode(true);
-      const link = item.querySelector('a');
-      link.href = href;
-      link.textContent = label;
+    // Remove existing EVENTS / CAREER NEXUS / OUR PARTNERS items (matched by
+    // label text, so stale duplicates and wrong-href variants are covered too),
+    // remembering which one was highlighted as the current page.
+    var labels = NAV.map(function (n) { return n.label; });
+    var activeLabels = {};
+    Array.prototype.slice.call(menu.querySelectorAll('li')).forEach(function (item) {
+      var a = item.querySelector('a');
+      if (!a) return;
+      if (labels.indexOf(norm(a.textContent)) !== -1) {
+        if (a.classList.contains('text-white')) activeLabels[norm(a.textContent)] = true;
+        item.remove();
+      }
+    });
+
+    var createNavItem = function (spec) {
+      var item = registrationItem.cloneNode(true);
+      var link = item.querySelector('a');
+      link.setAttribute('href', spec.href);
+      link.textContent = spec.label;
+      if (activeLabels[spec.label]) {
+        var gray = Array.prototype.slice.call(link.classList).filter(function (cls) {
+          return /^text-gray-\d+$/.test(cls);
+        })[0];
+        if (gray) link.classList.replace(gray, 'text-white');
+      }
       return item;
     };
 
-    registrationItem.insertAdjacentElement('afterend', createNavItem('/career-nexus.html', 'CAREER NEXUS'));
-    registrationItem.insertAdjacentElement('afterend', createNavItem('/events.html', 'EVENTS'));
+    var anchor = registrationItem;
+    NAV.forEach(function (spec) {
+      var item = createNavItem(spec);
+      anchor.insertAdjacentElement('afterend', item);
+      anchor = item;
+    });
   });
 
   const menuToggle = document.getElementById('menu-toggle');
