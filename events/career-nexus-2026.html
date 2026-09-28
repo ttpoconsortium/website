@@ -37,8 +37,14 @@
                 "endDate": "2026-09-12T17:00:00+05:30",
                 "location": {
                     "@type": "Place",
-                    "name": "Hyderabad",
-                    "address": "Hyderabad, Telangana, India"
+                    "name": "Tech Mahindra, Danube Auditorium, Hitec City, Hyderabad",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "streetAddress": "Danube Auditorium, Tech Mahindra, Hitec City",
+                        "addressLocality": "Hyderabad",
+                        "addressRegion": "Telangana",
+                        "addressCountry": "IN"
+                    }
                 },
                 "image": "https://www.ttpoconsortium.in/assets/career-nexus-2026/career-nexus-2026-1.jpeg",
                 "description": "Catalyzing Careers Through Global Capability Centers.",
@@ -105,6 +111,76 @@
         animation: fadeInUp 0.6s forwards;
         animation-delay: calc(var(--animation-order) * 0.1s);
         opacity: 0;
+    }
+
+    /* Agenda */
+    .agenda-tab {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.125rem;
+        padding: 0.5rem 1.75rem;
+        border-radius: 0.5rem;
+        font-size: 0.875rem;
+        font-weight: 700;
+        color: #d1d5db;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.2s ease;
+        cursor: pointer;
+    }
+
+    .agenda-tab span {
+        font-size: 0.7rem;
+        font-weight: 500;
+        color: #9ca3af;
+    }
+
+    .agenda-tab:hover {
+        background: rgba(255, 255, 255, 0.1);
+        color: #fff;
+    }
+
+    .agenda-tab.active {
+        background: linear-gradient(to right, #0369a1, #0ea5e9);
+        border-color: transparent;
+        color: #fff;
+    }
+
+    .agenda-tab.active span {
+        color: #e0f2fe;
+    }
+
+    .agenda-dot {
+        position: absolute;
+        left: -5px;
+        top: 6px;
+        width: 10px;
+        height: 10px;
+        border-radius: 9999px;
+        background: #38bdf8;
+        box-shadow: 0 0 0 4px rgba(14, 165, 233, 0.2);
+    }
+
+    .agenda-item.break .agenda-dot {
+        background: #fbbf24;
+        box-shadow: 0 0 0 4px rgba(251, 191, 36, 0.18);
+    }
+
+    .agenda-speakers li {
+        position: relative;
+        padding-left: 0.875rem;
+    }
+
+    .agenda-speakers li::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0.6em;
+        width: 0.3rem;
+        height: 0.3rem;
+        border-radius: 9999px;
+        background: #1d9cc0;
     }
 </style>
 
@@ -230,12 +306,12 @@
 
                                 <div class="flex items-center gap-3">
                                     <i class="fas fa-map-marker-alt text-primary-400 w-5"></i>
-                                    <span>Hyderabad</span>
+                                    <span>Tech Mahindra, Danube Auditorium, Hitec City, Hyderabad</span>
                                 </div>
 
                                 <div class="flex items-center gap-3">
                                     <i class="fas fa-clock text-primary-400 w-5"></i>
-                                    <span>9:00 AM onwards</span>
+                                    <span>9:00 AM onwards (Registration from 8:00 AM)</span>
                                 </div>
                             </div>
                         </div>
@@ -253,6 +329,545 @@
                             </p>
                         </div>
 
+                    </div>
+                </div>
+            </section>
+
+            <!-- Agenda -->
+            <section class="container mx-auto px-4 mb-12">
+                <h2 class="text-2xl font-semibold text-center mb-3 flex items-center justify-center gap-3">
+                    <i class="fas fa-calendar-days text-primary-400"></i> Agenda
+                </h2>
+                <p class="text-center text-gray-300 mb-8">
+                    <i class="fas fa-location-dot text-primary-400 mr-2"></i>Tech Mahindra, Danube Auditorium,
+                    Hitec City, Hyderabad
+                </p>
+
+                <div class="bg-gray-900/80 backdrop-blur-md rounded-xl p-6 md:p-8 shadow-xl border border-white/10">
+                    <!-- Day Tabs -->
+                    <div class="flex flex-wrap justify-center gap-3 mb-8" role="tablist" aria-label="Agenda days">
+                        <button type="button" class="agenda-tab active" data-day="agenda-day-1" role="tab"
+                            aria-selected="true" aria-controls="agenda-day-1">
+                            Day 1
+                            <span>Friday, 11th September 2026</span>
+                        </button>
+                        <button type="button" class="agenda-tab" data-day="agenda-day-2" role="tab"
+                            aria-selected="false" aria-controls="agenda-day-2">
+                            Day 2
+                            <span>Saturday, 12th September 2026</span>
+                        </button>
+                    </div>
+
+                    <!-- Day 1 -->
+                    <div id="agenda-day-1" class="agenda-day" role="tabpanel">
+                        <h3 class="text-xl font-semibold text-primary-400 flex items-center gap-2 mb-6">
+                            <i class="fas fa-sun"></i> Day 1 &mdash; Friday, 11th September 2026
+                        </h3>
+
+                        <div class="space-y-0">
+                            <!-- Registration -->
+                            <div class="flex gap-4 md:gap-6">
+                                <div class="w-24 sm:w-36 md:w-40 shrink-0">
+                                    <span
+                                        class="block text-[11px] md:text-xs font-semibold tracking-wide text-center text-primary-300 bg-primary-500/10 border border-primary-500/30 rounded-full px-2 py-1">08:00 AM &ndash; 09:00 AM</span>
+                                </div>
+                                <div class="agenda-item break relative flex-1 border-l border-white/10 pl-5 md:pl-6 pb-6">
+                                    <span class="agenda-dot"></span>
+                                    <h4 class="font-semibold text-gray-200">Registration &amp; Breakfast</h4>
+                                    <p class="text-sm text-gray-400">Networking Breakfast &amp; Tea</p>
+                                </div>
+                            </div>
+
+                            <!-- Assembly -->
+                            <div class="flex gap-4 md:gap-6">
+                                <div class="w-24 sm:w-36 md:w-40 shrink-0">
+                                    <span
+                                        class="block text-[11px] md:text-xs font-semibold tracking-wide text-center text-primary-300 bg-primary-500/10 border border-primary-500/30 rounded-full px-2 py-1">09:00 AM &ndash; 09:30 AM</span>
+                                </div>
+                                <div class="agenda-item relative flex-1 border-l border-white/10 pl-5 md:pl-6 pb-6">
+                                    <span class="agenda-dot"></span>
+                                    <h4 class="font-semibold">Assembly in the Auditorium</h4>
+                                </div>
+                            </div>
+
+                            <!-- Inauguration -->
+                            <div class="flex gap-4 md:gap-6">
+                                <div class="w-24 sm:w-36 md:w-40 shrink-0">
+                                    <span
+                                        class="block text-[11px] md:text-xs font-semibold tracking-wide text-center text-primary-300 bg-primary-500/10 border border-primary-500/30 rounded-full px-2 py-1">09:30 AM &ndash; 09:40 AM</span>
+                                </div>
+                                <div class="agenda-item relative flex-1 border-l border-white/10 pl-5 md:pl-6 pb-6">
+                                    <span class="agenda-dot"></span>
+                                    <h4 class="font-semibold">Inauguration and Lightening of the Lamp</h4>
+                                </div>
+                            </div>
+
+                            <!-- Dance Performance -->
+                            <div class="flex gap-4 md:gap-6">
+                                <div class="w-24 sm:w-36 md:w-40 shrink-0">
+                                    <span
+                                        class="block text-[11px] md:text-xs font-semibold tracking-wide text-center text-primary-300 bg-primary-500/10 border border-primary-500/30 rounded-full px-2 py-1">09:40 AM &ndash; 10:00 AM</span>
+                                </div>
+                                <div class="agenda-item relative flex-1 border-l border-white/10 pl-5 md:pl-6 pb-6">
+                                    <span class="agenda-dot"></span>
+                                    <h4 class="font-semibold">Dance Performance</h4>
+                                    <p class="text-sm text-gray-400">Chief Guest and members on Dias</p>
+                                </div>
+                            </div>
+
+                            <!-- Opening Remarks -->
+                            <div class="flex gap-4 md:gap-6">
+                                <div class="w-24 sm:w-36 md:w-40 shrink-0">
+                                    <span
+                                        class="block text-[11px] md:text-xs font-semibold tracking-wide text-center text-primary-300 bg-primary-500/10 border border-primary-500/30 rounded-full px-2 py-1">10:00 AM &ndash; 10:15 AM</span>
+                                </div>
+                                <div class="agenda-item relative flex-1 border-l border-white/10 pl-5 md:pl-6 pb-6">
+                                    <span class="agenda-dot"></span>
+                                    <h4 class="font-semibold">Opening Remarks by the President of TTPOC</h4>
+                                    <p class="text-sm text-primary-300">Ms. Vijaya Mair</p>
+                                </div>
+                            </div>
+
+                            <!-- Chief Guest Talk 1 -->
+                            <div class="flex gap-4 md:gap-6">
+                                <div class="w-24 sm:w-36 md:w-40 shrink-0">
+                                    <span
+                                        class="block text-[11px] md:text-xs font-semibold tracking-wide text-center text-primary-300 bg-primary-500/10 border border-primary-500/30 rounded-full px-2 py-1">10:15 AM &ndash; 11:00 AM</span>
+                                </div>
+                                <div class="agenda-item relative flex-1 border-l border-white/10 pl-5 md:pl-6 pb-6">
+                                    <span class="agenda-dot"></span>
+                                    <h4 class="font-semibold">Chief Guest Talk 1</h4>
+                                    <ul class="agenda-speakers mt-2 space-y-1 text-sm text-gray-300">
+                                        <li>Shri. J. A. Chowdary &mdash; Entrepreneur, Innovator &amp; Angel Investor</li>
+                                        <li>Shri. Ajaya Kumar Vemulapati &mdash; Chairman, AP TIDCO Ltd</li>
+                                        <li>Shri. Nitin Kumar Reddy &mdash; CEO, TASK</li>
+                                        <li>Prof. T. Kishen Kumar Reddy &mdash; Vice Chancellor, JNTUH</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Tea Break -->
+                            <div class="flex gap-4 md:gap-6">
+                                <div class="w-24 sm:w-36 md:w-40 shrink-0">
+                                    <span
+                                        class="block text-[11px] md:text-xs font-semibold tracking-wide text-center text-primary-300 bg-primary-500/10 border border-primary-500/30 rounded-full px-2 py-1">11:00 AM &ndash; 11:15 AM</span>
+                                </div>
+                                <div class="agenda-item break relative flex-1 border-l border-white/10 pl-5 md:pl-6 pb-6">
+                                    <span class="agenda-dot"></span>
+                                    <h4 class="font-semibold text-gray-200">Tea / Coffee Break</h4>
+                                    <p class="text-sm text-gray-400">Morning networking &amp; break</p>
+                                </div>
+                            </div>
+
+                            <!-- Panel Discussion 1 -->
+                            <div class="flex gap-4 md:gap-6">
+                                <div class="w-24 sm:w-36 md:w-40 shrink-0">
+                                    <span
+                                        class="block text-[11px] md:text-xs font-semibold tracking-wide text-center text-primary-300 bg-primary-500/10 border border-primary-500/30 rounded-full px-2 py-1">11:15 AM &ndash; 12:00 PM</span>
+                                </div>
+                                <div class="agenda-item relative flex-1 border-l border-white/10 pl-5 md:pl-6 pb-6">
+                                    <span class="agenda-dot"></span>
+                                    <h4 class="font-semibold">Panel Discussion 1</h4>
+                                    <p class="text-sm text-primary-300 mt-1">From Volume to Value: Shifting Campus
+                                        Hiring to Skills First &amp; Product-Mindset Models</p>
+                                    <p class="text-sm text-gray-400 mt-2"><span class="text-gray-200 font-medium">Moderator:</span>
+                                        Sami Anand, LPU</p>
+                                    <ul class="agenda-speakers mt-2 space-y-1 text-sm text-gray-300">
+                                        <li>Mr. Krishna Reddy Chinta &mdash; Regional Head, South &amp; East, LinkedIn</li>
+                                        <li>Mr. Praveen Panthula &mdash; Director, EPAM Systems</li>
+                                        <li>Mr. Peddaredappa G (GPR) &mdash; Senior Director, India Site Leader, Nasuni</li>
+                                        <li>Mr. Vinay Peddinti &mdash; Vice President, Strategic Operations, Apty</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Expert Session 1 -->
+                            <div class="flex gap-4 md:gap-6">
+                                <div class="w-24 sm:w-36 md:w-40 shrink-0">
+                                    <span
+                                        class="block text-[11px] md:text-xs font-semibold tracking-wide text-center text-primary-300 bg-primary-500/10 border border-primary-500/30 rounded-full px-2 py-1">12:00 PM &ndash; 12:15 PM</span>
+                                </div>
+                                <div class="agenda-item relative flex-1 border-l border-white/10 pl-5 md:pl-6 pb-6">
+                                    <span class="agenda-dot"></span>
+                                    <h4 class="font-semibold">Expert Session 1</h4>
+                                    <p class="text-sm text-primary-300">Onroll</p>
+                                </div>
+                            </div>
+
+                            <!-- Panel Discussion 2 -->
+                            <div class="flex gap-4 md:gap-6">
+                                <div class="w-24 sm:w-36 md:w-40 shrink-0">
+                                    <span
+                                        class="block text-[11px] md:text-xs font-semibold tracking-wide text-center text-primary-300 bg-primary-500/10 border border-primary-500/30 rounded-full px-2 py-1">12:15 PM &ndash; 01:00 PM</span>
+                                </div>
+                                <div class="agenda-item relative flex-1 border-l border-white/10 pl-5 md:pl-6 pb-6">
+                                    <span class="agenda-dot"></span>
+                                    <h4 class="font-semibold">Panel Discussion 2</h4>
+                                    <p class="text-sm text-primary-300 mt-1">Beyond Internships: Making Apprenticeships a
+                                        Structured Pathway to Employment</p>
+                                    <p class="text-sm text-gray-400 mt-2"><span class="text-gray-200 font-medium">Moderator:</span>
+                                        Ms. Vijaya Mair</p>
+                                    <ul class="agenda-speakers mt-2 space-y-1 text-sm text-gray-300">
+                                        <li>Mr. Vinay Reddy Chandupatla &mdash; Sr. Manager, Talent Acquisition, Blue
+                                            Yonder</li>
+                                        <li>Dr. N. Venkata Sastry &mdash; Director, Career Centre, SRM IST Chennai</li>
+                                        <li>Mr. Shaik Ayub &mdash; Group Chief AI Security Officer, Blue Cloud Softech
+                                            Solutions Ltd</li>
+                                        <li>Mr. Narane Gundabathula &mdash; Director, APAC People, Storable India</li>
+                                        <li>Ms. Srilakshmi Kesari &mdash; Vice President &amp; Country HR Head, India,
+                                            Lyric</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Expert Session 2 -->
+                            <div class="flex gap-4 md:gap-6">
+                                <div class="w-24 sm:w-36 md:w-40 shrink-0">
+                                    <span
+                                        class="block text-[11px] md:text-xs font-semibold tracking-wide text-center text-primary-300 bg-primary-500/10 border border-primary-500/30 rounded-full px-2 py-1">01:00 PM &ndash; 01:15 PM</span>
+                                </div>
+                                <div class="agenda-item relative flex-1 border-l border-white/10 pl-5 md:pl-6 pb-6">
+                                    <span class="agenda-dot"></span>
+                                    <h4 class="font-semibold">Expert Session 2</h4>
+                                    <p class="text-sm text-primary-300">Smart Interviews</p>
+                                </div>
+                            </div>
+
+                            <!-- Lunch -->
+                            <div class="flex gap-4 md:gap-6">
+                                <div class="w-24 sm:w-36 md:w-40 shrink-0">
+                                    <span
+                                        class="block text-[11px] md:text-xs font-semibold tracking-wide text-center text-primary-300 bg-primary-500/10 border border-primary-500/30 rounded-full px-2 py-1">01:15 PM &ndash; 02:00 PM</span>
+                                </div>
+                                <div class="agenda-item break relative flex-1 border-l border-white/10 pl-5 md:pl-6 pb-6">
+                                    <span class="agenda-dot"></span>
+                                    <h4 class="font-semibold text-gray-200">Lunch Break</h4>
+                                    <p class="text-sm text-gray-400">Networking Lunch</p>
+                                </div>
+                            </div>
+
+                            <!-- Post-Lunch Activity -->
+                            <div class="flex gap-4 md:gap-6">
+                                <div class="w-24 sm:w-36 md:w-40 shrink-0">
+                                    <span
+                                        class="block text-[11px] md:text-xs font-semibold tracking-wide text-center text-primary-300 bg-primary-500/10 border border-primary-500/30 rounded-full px-2 py-1">02:00 PM &ndash; 02:15 PM</span>
+                                </div>
+                                <div class="agenda-item relative flex-1 border-l border-white/10 pl-5 md:pl-6 pb-6">
+                                    <span class="agenda-dot"></span>
+                                    <h4 class="font-semibold">Post-Lunch Activity 1</h4>
+                                    <p class="text-sm text-primary-300">Engaging Activity</p>
+                                </div>
+                            </div>
+
+                            <!-- Expert Session 3 -->
+                            <div class="flex gap-4 md:gap-6">
+                                <div class="w-24 sm:w-36 md:w-40 shrink-0">
+                                    <span
+                                        class="block text-[11px] md:text-xs font-semibold tracking-wide text-center text-primary-300 bg-primary-500/10 border border-primary-500/30 rounded-full px-2 py-1">02:15 PM &ndash; 02:30 PM</span>
+                                </div>
+                                <div class="agenda-item relative flex-1 border-l border-white/10 pl-5 md:pl-6 pb-6">
+                                    <span class="agenda-dot"></span>
+                                    <h4 class="font-semibold">Expert Session 3</h4>
+                                    <p class="text-sm text-primary-300">TekWorks</p>
+                                </div>
+                            </div>
+
+                            <!-- Panel Discussion 3 -->
+                            <div class="flex gap-4 md:gap-6">
+                                <div class="w-24 sm:w-36 md:w-40 shrink-0">
+                                    <span
+                                        class="block text-[11px] md:text-xs font-semibold tracking-wide text-center text-primary-300 bg-primary-500/10 border border-primary-500/30 rounded-full px-2 py-1">02:30 PM &ndash; 03:15 PM</span>
+                                </div>
+                                <div class="agenda-item relative flex-1 border-l border-white/10 pl-5 md:pl-6 pb-6">
+                                    <span class="agenda-dot"></span>
+                                    <h4 class="font-semibold">Panel Discussion 3</h4>
+                                    <p class="text-sm text-primary-300 mt-1">The Diversity Imperative: How GCCs and Colleges
+                                        Can Co-build a 40% Women Pipeline</p>
+                                    <p class="text-sm text-gray-400 mt-2"><span class="text-gray-200 font-medium">Moderator:</span>
+                                        Kiran Kuncham</p>
+                                    <ul class="agenda-speakers mt-2 space-y-1 text-sm text-gray-300">
+                                        <li>Ms. Krishna Chaitanya &mdash; Senior Recruiter, Technology Hiring, Feuji Inc</li>
+                                        <li>Ms. Carolina Mathew &mdash; Talent Acquisition OPS PMO &amp; Program Manager,
+                                            HEINEKEN</li>
+                                        <li>Mr. Sushanth Rao P &mdash; Early Career &amp; EWF Lead, ADP</li>
+                                        <li>Mr. Arun Subnavis &mdash; Talent Acquisition Leader, TriNet</li>
+                                        <li>Mr. Bharath Avula &mdash; Talent Acquisition Manager, DAZN</li>
+                                        <li>Mr. Raj Shekhar &mdash; Talent Acquisition Specialist, Zodiac Solutions, Inc</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Expert Session 4 -->
+                            <div class="flex gap-4 md:gap-6">
+                                <div class="w-24 sm:w-36 md:w-40 shrink-0">
+                                    <span
+                                        class="block text-[11px] md:text-xs font-semibold tracking-wide text-center text-primary-300 bg-primary-500/10 border border-primary-500/30 rounded-full px-2 py-1">03:15 PM &ndash; 03:30 PM</span>
+                                </div>
+                                <div class="agenda-item relative flex-1 border-l border-white/10 pl-5 md:pl-6 pb-6">
+                                    <span class="agenda-dot"></span>
+                                    <h4 class="font-semibold">Expert Session 4</h4>
+                                    <p class="text-sm text-primary-300">Expert Hire</p>
+                                </div>
+                            </div>
+
+                            <!-- High Tea -->
+                            <div class="flex gap-4 md:gap-6">
+                                <div class="w-24 sm:w-36 md:w-40 shrink-0">
+                                    <span
+                                        class="block text-[11px] md:text-xs font-semibold tracking-wide text-center text-primary-300 bg-primary-500/10 border border-primary-500/30 rounded-full px-2 py-1">03:30 PM &ndash; 03:45 PM</span>
+                                </div>
+                                <div class="agenda-item break relative flex-1 border-l border-white/10 pl-5 md:pl-6 pb-6">
+                                    <span class="agenda-dot"></span>
+                                    <h4 class="font-semibold text-gray-200">High Tea Break</h4>
+                                    <p class="text-sm text-gray-400">Afternoon refreshments</p>
+                                </div>
+                            </div>
+
+                            <!-- Panel Discussion 4 -->
+                            <div class="flex gap-4 md:gap-6">
+                                <div class="w-24 sm:w-36 md:w-40 shrink-0">
+                                    <span
+                                        class="block text-[11px] md:text-xs font-semibold tracking-wide text-center text-primary-300 bg-primary-500/10 border border-primary-500/30 rounded-full px-2 py-1">03:45 PM &ndash; 04:30 PM</span>
+                                </div>
+                                <div class="agenda-item relative flex-1 border-l border-white/10 pl-5 md:pl-6 pb-6">
+                                    <span class="agenda-dot"></span>
+                                    <h4 class="font-semibold">Panel Discussion 4</h4>
+                                    <p class="text-sm text-primary-300 mt-1">Beyond Tier-1: Tapping Tier-2 Talent Pools and
+                                        Specialized Engineering Centres via Skilling</p>
+                                    <p class="text-sm text-gray-400 mt-2"><span class="text-gray-200 font-medium">Moderator:</span>
+                                        Dr. R. Ashok Kumar</p>
+                                    <ul class="agenda-speakers mt-2 space-y-1 text-sm text-gray-300">
+                                        <li>Mr. Rahul Sachdev &mdash; Head, SAP University Alliances, Program
+                                            Manager-India Subcontinent, SAP</li>
+                                        <li>Mr. P. Amarendra Babu &mdash; Deputy Director, South India, Life Sciences
+                                            Sector Skill Development Council</li>
+                                        <li>Ms. Kusala Gade &mdash; Program Manager, NSE Academy, Fortinet</li>
+                                        <li>Mr. Yuktesh Chintamadaka &mdash; Director, Academic Initiative,
+                                            TheSmartBridge</li>
+                                        <li>Mr. Ganesh Nag Doddi &mdash; Founder and CEO, Brainovision Solutions India
+                                            Pvt. Ltd</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Expert Session 5 -->
+                            <div class="flex gap-4 md:gap-6">
+                                <div class="w-24 sm:w-36 md:w-40 shrink-0">
+                                    <span
+                                        class="block text-[11px] md:text-xs font-semibold tracking-wide text-center text-primary-300 bg-primary-500/10 border border-primary-500/30 rounded-full px-2 py-1">04:30 PM &ndash; 04:45 PM</span>
+                                </div>
+                                <div class="agenda-item relative flex-1 border-l border-white/10 pl-5 md:pl-6 pb-6">
+                                    <span class="agenda-dot"></span>
+                                    <h4 class="font-semibold">Expert Session 5</h4>
+                                    <p class="text-sm text-primary-300">Quantum Academics</p>
+                                </div>
+                            </div>
+
+                            <!-- Expert Talk 3 -->
+                            <div class="flex gap-4 md:gap-6">
+                                <div class="w-24 sm:w-36 md:w-40 shrink-0">
+                                    <span
+                                        class="block text-[11px] md:text-xs font-semibold tracking-wide text-center text-primary-300 bg-primary-500/10 border border-primary-500/30 rounded-full px-2 py-1">04:45 PM &ndash; 05:00 PM</span>
+                                </div>
+                                <div class="agenda-item relative flex-1 border-l border-white/10 pl-5 md:pl-6 pb-6">
+                                    <span class="agenda-dot"></span>
+                                    <h4 class="font-semibold">Expert Talk 3</h4>
+                                    <p class="text-sm text-primary-300 mt-1">The Rise of Agentic Workflows and Automation
+                                        in Modern Enterprises</p>
+                                    <p class="text-sm text-gray-300 mt-2">Mr. Charan Lakkaraju &mdash; Founder &amp; CEO,
+                                        Student Tribe</p>
+                                </div>
+                            </div>
+
+                            <!-- Day One Wrap-Up -->
+                            <div class="flex gap-4 md:gap-6">
+                                <div class="w-24 sm:w-36 md:w-40 shrink-0">
+                                    <span
+                                        class="block text-[11px] md:text-xs font-semibold tracking-wide text-center text-primary-300 bg-primary-500/10 border border-primary-500/30 rounded-full px-2 py-1">05:00 PM &ndash; 05:15 PM</span>
+                                </div>
+                                <div class="agenda-item relative flex-1 border-l border-white/10 pl-5 md:pl-6 pb-6">
+                                    <span class="agenda-dot"></span>
+                                    <h4 class="font-semibold">Day One Wrap-Up</h4>
+                                    <p class="text-sm text-primary-300 mt-1">MoU Exchange &amp; Summary of Day One Insights
+                                        &amp; Evening Announcements</p>
+                                </div>
+                            </div>
+
+                            <!-- Gala Dinner -->
+                            <div class="flex gap-4 md:gap-6">
+                                <div class="w-24 sm:w-36 md:w-40 shrink-0">
+                                    <span
+                                        class="block text-[11px] md:text-xs font-semibold tracking-wide text-center text-primary-300 bg-primary-500/10 border border-primary-500/30 rounded-full px-2 py-1">07:00 PM onwards</span>
+                                </div>
+                                <div class="agenda-item break relative flex-1 border-l border-white/10 pl-5 md:pl-6">
+                                    <span class="agenda-dot"></span>
+                                    <h4 class="font-semibold text-gray-200">Gala Dinner</h4>
+                                    <p class="text-sm text-primary-300 mt-1">Cocktail Musical Night &amp; Gala Dinner</p>
+                                    <p class="text-sm text-gray-400 mt-1">Shilpa Ramam, Hitec City</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Day 2 -->
+                    <div id="agenda-day-2" class="agenda-day hidden" role="tabpanel">
+                        <h3 class="text-xl font-semibold text-primary-400 flex items-center gap-2 mb-6">
+                            <i class="fas fa-moon"></i> Day 2 &mdash; Saturday, 12th September 2026
+                        </h3>
+
+                        <div class="space-y-0">
+                            <!-- Breakfast -->
+                            <div class="flex gap-4 md:gap-6">
+                                <div class="w-24 sm:w-36 md:w-40 shrink-0">
+                                    <span
+                                        class="block text-[11px] md:text-xs font-semibold tracking-wide text-center text-primary-300 bg-primary-500/10 border border-primary-500/30 rounded-full px-2 py-1">09:00 AM &ndash; 09:30 AM</span>
+                                </div>
+                                <div class="agenda-item break relative flex-1 border-l border-white/10 pl-5 md:pl-6 pb-6">
+                                    <span class="agenda-dot"></span>
+                                    <h4 class="font-semibold text-gray-200">Breakfast &amp; Networking</h4>
+                                    <p class="text-sm text-gray-400">Morning breakfast &amp; networking</p>
+                                </div>
+                            </div>
+
+                            <!-- Opening Remarks -->
+                            <div class="flex gap-4 md:gap-6">
+                                <div class="w-24 sm:w-36 md:w-40 shrink-0">
+                                    <span
+                                        class="block text-[11px] md:text-xs font-semibold tracking-wide text-center text-primary-300 bg-primary-500/10 border border-primary-500/30 rounded-full px-2 py-1">09:30 AM &ndash; 09:45 AM</span>
+                                </div>
+                                <div class="agenda-item relative flex-1 border-l border-white/10 pl-5 md:pl-6 pb-6">
+                                    <span class="agenda-dot"></span>
+                                    <h4 class="font-semibold">Opening Remarks &mdash; Day One Recap</h4>
+                                    <p class="text-sm text-primary-300 mt-1">Overview: Execution of Day 2</p>
+                                </div>
+                            </div>
+
+                            <!-- Expert Talk 4 -->
+                            <div class="flex gap-4 md:gap-6">
+                                <div class="w-24 sm:w-36 md:w-40 shrink-0">
+                                    <span
+                                        class="block text-[11px] md:text-xs font-semibold tracking-wide text-center text-primary-300 bg-primary-500/10 border border-primary-500/30 rounded-full px-2 py-1">10:15 AM &ndash; 10:45 AM</span>
+                                </div>
+                                <div class="agenda-item relative flex-1 border-l border-white/10 pl-5 md:pl-6 pb-6">
+                                    <span class="agenda-dot"></span>
+                                    <h4 class="font-semibold">Expert Talk 4</h4>
+                                    <p class="text-sm text-primary-300 mt-1">Charles Godwin &mdash; Zoho Corporation</p>
+                                </div>
+                            </div>
+
+                            <!-- Panel Discussion 5 -->
+                            <div class="flex gap-4 md:gap-6">
+                                <div class="w-24 sm:w-36 md:w-40 shrink-0">
+                                    <span
+                                        class="block text-[11px] md:text-xs font-semibold tracking-wide text-center text-primary-300 bg-primary-500/10 border border-primary-500/30 rounded-full px-2 py-1">10:45 AM &ndash; 11:45 AM</span>
+                                </div>
+                                <div class="agenda-item relative flex-1 border-l border-white/10 pl-5 md:pl-6 pb-6">
+                                    <span class="agenda-dot"></span>
+                                    <h4 class="font-semibold">Panel Discussion 5 &mdash; The Missing Middle</h4>
+                                    <p class="text-sm text-primary-300 mt-1">Who trains the fresher when AI already does the
+                                        first job? GCCs are bottom heavy &mdash; the tasks that used to convert juniors
+                                        into mid-level talent are exactly the ones being automated.</p>
+                                    <p class="text-sm text-gray-400 mt-2"><span class="text-gray-200 font-medium">Moderator:</span>
+                                        Ganesh Somisetti</p>
+                                    <ul class="agenda-speakers mt-2 space-y-1 text-sm text-gray-300">
+                                        <li>Ms. Swetha Desai &mdash; Director, Talent Acquisition, India &amp; APAC, SEI</li>
+                                        <li>Mr. Vijayan R &mdash; Head of Talent Acquisition, Sonata Software</li>
+                                        <li>Mr. Krithivasan S &mdash; Chief Human Resources Officer, P&amp;G Consumer Care
+                                            Pvt. Ltd</li>
+                                        <li>Ms. Amrrutha Sharma &mdash; Director HR, enGen Global</li>
+                                        <li>Mr. Shiva Prasad Kamini &mdash; Head, Global Strategy &amp; Business
+                                            Transformation, FourthTree Global Services</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- DataTeach.Ai -->
+                            <div class="flex gap-4 md:gap-6">
+                                <div class="w-24 sm:w-36 md:w-40 shrink-0">
+                                    <span
+                                        class="block text-[11px] md:text-xs font-semibold tracking-wide text-center text-primary-300 bg-primary-500/10 border border-primary-500/30 rounded-full px-2 py-1">11:45 AM &ndash; 12:00 PM</span>
+                                </div>
+                                <div class="agenda-item relative flex-1 border-l border-white/10 pl-5 md:pl-6 pb-6">
+                                    <span class="agenda-dot"></span>
+                                    <h4 class="font-semibold">DataTeach.Ai</h4>
+                                </div>
+                            </div>
+
+                            <!-- Maven Silicon -->
+                            <div class="flex gap-4 md:gap-6">
+                                <div class="w-24 sm:w-36 md:w-40 shrink-0">
+                                    <span
+                                        class="block text-[11px] md:text-xs font-semibold tracking-wide text-center text-primary-300 bg-primary-500/10 border border-primary-500/30 rounded-full px-2 py-1">12:00 PM &ndash; 12:15 PM</span>
+                                </div>
+                                <div class="agenda-item relative flex-1 border-l border-white/10 pl-5 md:pl-6 pb-6">
+                                    <span class="agenda-dot"></span>
+                                    <h4 class="font-semibold">Maven Silicon</h4>
+                                </div>
+                            </div>
+
+                            <!-- Expert Talk 7 -->
+                            <div class="flex gap-4 md:gap-6">
+                                <div class="w-24 sm:w-36 md:w-40 shrink-0">
+                                    <span
+                                        class="block text-[11px] md:text-xs font-semibold tracking-wide text-center text-primary-300 bg-primary-500/10 border border-primary-500/30 rounded-full px-2 py-1">12:15 PM &ndash; 12:30 PM</span>
+                                </div>
+                                <div class="agenda-item relative flex-1 border-l border-white/10 pl-5 md:pl-6 pb-6">
+                                    <span class="agenda-dot"></span>
+                                    <h4 class="font-semibold">Expert Talk 7</h4>
+                                    <p class="text-sm text-primary-300">GradStreet</p>
+                                </div>
+                            </div>
+
+                            <!-- Panel Discussion 6 -->
+                            <div class="flex gap-4 md:gap-6">
+                                <div class="w-24 sm:w-36 md:w-40 shrink-0">
+                                    <span
+                                        class="block text-[11px] md:text-xs font-semibold tracking-wide text-center text-primary-300 bg-primary-500/10 border border-primary-500/30 rounded-full px-2 py-1">12:30 PM &ndash; 01:30 PM</span>
+                                </div>
+                                <div class="agenda-item relative flex-1 border-l border-white/10 pl-5 md:pl-6 pb-6">
+                                    <span class="agenda-dot"></span>
+                                    <h4 class="font-semibold">Panel Discussion 6</h4>
+                                    <p class="text-sm text-primary-300 mt-1">Nobody hires corporate-function freshers, and
+                                        that&rsquo;s a mistake. Finance, HR, procurement and legal roles in GCCs are hired
+                                        almost entirely lateral &mdash; and then you worry about a thin bench. Why does
+                                        campus early-career exist only for Engineering, the majority?</p>
+                                    <p class="text-sm text-gray-400 mt-2"><span class="text-gray-200 font-medium">Moderator:</span>
+                                        Dr. N. Venkata Sastry</p>
+                                    <ul class="agenda-speakers mt-2 space-y-1 text-sm text-gray-300">
+                                        <li>Debasree Das &mdash; Manager, Early Careers / TA / CS, Zapcom</li>
+                                        <li>Priya Desu &mdash; TA Manager, Arcelor Mittal</li>
+                                        <li>Solomon Devavaram &mdash; Senior Director, Critical River</li>
+                                        <li>N. Ali &mdash; Sales Head &ndash; South, Volvo Eicher Commercial Vehicle</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Lunch -->
+                            <div class="flex gap-4 md:gap-6">
+                                <div class="w-24 sm:w-36 md:w-40 shrink-0">
+                                    <span
+                                        class="block text-[11px] md:text-xs font-semibold tracking-wide text-center text-primary-300 bg-primary-500/10 border border-primary-500/30 rounded-full px-2 py-1">01:30 PM &ndash; 02:30 PM</span>
+                                </div>
+                                <div class="agenda-item break relative flex-1 border-l border-white/10 pl-5 md:pl-6 pb-6">
+                                    <span class="agenda-dot"></span>
+                                    <h4 class="font-semibold text-gray-200">Lunch Break</h4>
+                                    <p class="text-sm text-gray-400">Networking Lunch</p>
+                                </div>
+                            </div>
+
+                            <!-- Wrap-Up -->
+                            <div class="flex gap-4 md:gap-6">
+                                <div class="w-24 sm:w-36 md:w-40 shrink-0">
+                                    <span
+                                        class="block text-[11px] md:text-xs font-semibold tracking-wide text-center text-primary-300 bg-primary-500/10 border border-primary-500/30 rounded-full px-2 py-1">02:30 PM &ndash; 03:30 PM</span>
+                                </div>
+                                <div class="agenda-item relative flex-1 border-l border-white/10 pl-5 md:pl-6">
+                                    <span class="agenda-dot"></span>
+                                    <h4 class="font-semibold">Wrap-Up</h4>
+                                    <p class="text-sm text-primary-300 mt-1">Open Q&amp;A and Synthesis of Discourses</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -343,6 +958,32 @@
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Agenda day tabs
+        const agendaTabs = document.querySelectorAll('.agenda-tab');
+        const agendaDays = document.querySelectorAll('.agenda-day');
+
+        function showAgendaDay(dayId) {
+            agendaTabs.forEach(function (tab) {
+                const isActive = tab.dataset.day === dayId;
+                tab.classList.toggle('active', isActive);
+                tab.setAttribute('aria-selected', isActive ? 'true' : 'false');
+            });
+
+            agendaDays.forEach(function (panel) {
+                panel.classList.toggle('hidden', panel.id !== dayId);
+            });
+        }
+
+        agendaTabs.forEach(function (tab) {
+            tab.addEventListener('click', function () {
+                showAgendaDay(tab.dataset.day);
+            });
+        });
+    });
+</script>
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
